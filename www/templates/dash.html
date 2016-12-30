@@ -1,0 +1,45 @@
+<ion-view>
+  <ion-content>
+    <div class="list text-center padding-top-50">
+      <i class="ion-ios-location location-lojo">
+
+      </i>
+
+      <div class="lojo-text border-0 item">
+        Meducap
+      </div>
+
+    </div>
+    <div ng-if="!long" class="text-center jrey font-mdd">
+      Please turn your gps on
+    </div>
+    <div ng-if="long" class="text-center jrey font-mdd">
+      <span>Longitude: {{long ||'xx' }} </span>
+    </div>
+    <div ng-if="long" class="text-center jrey font-mdd padding-top">
+      <span>Latitude: {{lat || 'yy'}}</span>
+    </div>
+    <div class="row text-center padding-top-40">
+      <div class="col col-33">
+        <a ui-sref="home.add-school">
+          <img src="img/edu.png">
+        </a>
+      </div>
+      <div class="col col-33">
+        <a ui-sref="home.add-hospital">
+          <img src="img/med2.png">
+        </a>
+      </div>
+      <div class="col col-33">
+        <a ui-sref="home.route-list">
+          <img src="img/route.png">
+        </a>
+      </div>
+    </div>
+
+
+  </ion-content>
+  <ion-footer-bar class="bar bar-positive padding-0">
+    <tabs></tabs>
+  </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,36 @@
+<ion-view>
+  <ion-content>
+
+
+    <ion-list>
+      <div class="text-center" ng-if="!schools && !hospitals">
+        <ion-spinner></ion-spinner>
+      </div>
+      <div class="item margin-sm" ng-if="schools.length==0 && hospitals.length==0">
+        Currently the list is empty!
+      </div>
+      <ion-item class="item-avatar"  ng-repeat="school in schools" ui-sref="home.edit-school({id: $index})">
+        <img src="img/edu.png">
+        <span>{{school.name}}</span>
+        <span class="item-note"></span>
+        <!--<ion-option-button class="button-assertive"-->
+                           <!--ng-click="deleteS($index)">-->
+          <!--Delete-->
+        <!--</ion-option-button>-->
+      </ion-item>
+      <ion-item class="item-avatar"  ng-repeat="hospital in hospitals" ui-sref="home.edit-hospital({id: $index})">
+        <img src="img/med2.png">
+        <span>{{hospital.name}}</span>
+        <span class="item-note"></span>
+        <!--<ion-option-button class="button-assertive"-->
+                           <!--ng-click="deleteH($index)">-->
+          <!--Delete-->
+        <!--</ion-option-button>-->
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer-bar class="padding-0">
+    <tabs></tabs>
+  </ion-footer-bar>
+</ion-view>
+

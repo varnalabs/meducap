@@ -1,0 +1,27 @@
+<ion-view>
+  <ion-content>
+    <div class="list text-center padding-top-50">
+      <i class="ion-android-cloud-done location-lojo">
+
+      </i>
+
+
+
+    </div>
+    <!--<div class="text-center jrey font-mdd">-->
+      <!--<span>Last Entry: 5 hours ago</span>-->
+    <!--</div>-->
+    <div class="text-center jrey font-mdd padding-top">
+      <span class="assertive">Last synced: {{lastSync | date: "h:mma 'at' dd-MM-yyyy"}}</span>
+    </div>
+
+    <div class="list text-center padding-top-40">
+      <button class="button button-positive btn-sync" ng-click="uploadData()" >
+        <i class="ion-android-sync"></i>
+      </button>
+    </div>
+  </ion-content>
+  <ion-footer-bar class="bar bar-positive padding-0">
+    <tabs></tabs>
+  </ion-footer-bar>
+</ion-view>

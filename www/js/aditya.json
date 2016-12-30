@@ -1,0 +1,30 @@
+[{
+  "unicef":{
+    "schools": [{
+      "id": "1",
+      "school": "KV Schoool",
+      "lat": "12334",
+      "waterTank": true,
+      "studentStrength": "1234",
+      "rooms":"1234",
+      "long": "12334",
+      "nearestHospital": {
+        "id": "123",
+        "value": "Aditya extreme vaidik hospital"
+      }
+    },
+      {
+        "id": "3",
+        "school": "aditya extreme vaidik publick school",
+        "lat": "123343",
+        "long":12343
+      }],
+
+    "hospitals": [{
+      "id":"123",
+      "name": "Aditya Extreme Vaidik Hospital",
+      "lat": "!23",
+      "long": "12344"
+    }]
+  }
+}]

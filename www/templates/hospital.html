@@ -1,0 +1,116 @@
+<ion-view>
+  <ion-content class="lojin">
+    <form name="hospitalForm" ng-submit="addHospital(healthcare)" novalidate>
+    <div class="list text-center padding-top-50">
+      <img src="img/med2.png">
+
+      <div class="lojo-text border-0 item">
+        Hospital Details
+      </div>
+      <div class="">
+        <button ng-click="refreshLocation()" class="button button-default">
+          <i class="icon ion-location"></i>
+        </button>
+      </div>
+    </div>
+
+
+    <div class="list padding-top-40 margin-bottom-0">
+      <div class="item item-divider">
+        Health Facility Details
+      </div>
+      <label class="item item-input item-floating-label">
+        <span class="input-label" >Health Facility Name</span>
+        <input type="text" ng-model="healthcare.name" placeholder="Health Facility Name" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Latitude</span>
+        <input type="text" ng-model="healthcare.lat" placeholder="Latitude" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Longitude</span>
+        <input type="text" ng-model="healthcare.long" placeholder="Longitude" required>
+      </label>
+
+
+      <label class="item item-input custom item-select">
+        <span class="custom-label">Type of health facility</span>
+        <select ng-model="healthcare.type" required>
+          <option value="PHC" selected>PHC</option>
+          <option value="UPHC">UPHC</option>
+          <option value="CHC">CHC</option>
+          <option value="AH">AH</option>
+          <option value="DH">DH</option>
+          <option value="MCH">MCH</option>
+        </select>
+      </label>
+
+      <label class="item item-input custom item-select">
+        <span class="custom-label">Department</span>
+        <select ng-model="healthcare.department" required>
+          <option value="ZP" selected>ZP</option>
+          <option value="ITDA">ITDA</option>
+          <option value="MPP">MPP</option>
+          <option value="SW">SW</option>
+        </select>
+      </label>
+
+
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Hamlet</span>
+        <input ng-model="healthcare.hamlet" type="text" placeholder="Hamlet" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Landmark</span>
+        <input ng-model="healthcare.landmark" type="text" placeholder="Landmark" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Panchayat</span>
+        <input ng-model="healthcare.panchayat" type="text" placeholder="Panchayat" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Mandal</span>
+        <input ng-model="healthcare.mandal" type="text" placeholder="Mandal" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Pin Code</span>
+        <input ng-model="healthcare.pinCode" type="number" placeholder="Pin Code" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">&nbsp;</span>
+        <input  type="text" placeholder="" value="Visakhapatnam, Andhra Pradesh " readonly>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Phone</span>
+        <input ng-model="healthcare.phone" type="number" placeholder="Phone" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Distance to bus-stop (in KM)</span>
+        <input ng-model="healthcare.distanceToBusstop" type="text" placeholder="Distance to bus-stop (in KM)" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Name of nearest hamlet</span>
+        <input ng-model="healthcare.nearestHamlet" type="text" placeholder="Name of nearest hamlet" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Distance to nearest hamlet (in KM)</span>
+        <input ng-model="healthcare.distanceToNearestHamlet" type="number"
+               placeholder="Distance to nearest hamlet (in KM)" required>
+      </label>
+
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Remarks</span>
+        <textarea ng-model="healthcare.remarkLd" placeholder="Remarks"></textarea>
+      </label>
+
+    </div>
+
+      <button ng-disabled="hospitalForm.$invalid" class="button button-positive button-full margin-0 sign-btn">Save</button>
+
+
+</form>
+
+  </ion-content>
+
+</ion-view>
+
