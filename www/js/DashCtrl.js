@@ -5,10 +5,10 @@ meducap.controller('DashCtrl', function($scope,$cordovaGeolocation) {
   $cordovaGeolocation
     .getCurrentPosition(posOptions)
     .then(function (position) {
-      var lat  = position.coords.latitude;
-      var long = position.coords.longitude;
-      $scope.lat = lat;
-      $scope.long = long;
+      var Latitude  = position.coords.latitude;
+      var Longitude = position.coords.longitude;
+      $scope.Latitude = Latitude;
+      $scope.Longitude = Longitude;
     }, function(err) {
       // error
     });
@@ -26,10 +26,10 @@ meducap.controller('DashCtrl', function($scope,$cordovaGeolocation) {
       // error
     },
     function(position) {
-      var lat  = position.coords.latitude;
-      var long = position.coords.longitude;
-      $scope.lat = lat;
-      $scope.long = long;
+      var Latitude  = position.coords.latitude;
+      var Longitude = position.coords.longitude;
+      $scope.Latitude = Latitude;
+      $scope.Longitude = Longitude;
     });
   $scope.$on("$ionicView.leave", function(event, data){
     // handle event

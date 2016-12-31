@@ -38,11 +38,11 @@ meducap.controller('LoginCtrl', function($scope, $http, $ionicHistory,$state,$ti
     .getCurrentPosition(posOptions)
 
     .then(function (position) {
-      var lat  = position.coords.latitude;
-      var long = position.coords.longitude;
-      console.log(lat + '   ' + long);
-      $scope.lat = lat;
-      $scope.long = long;
+      var Latitude  = position.coords.latitude;
+      var Longitude = position.coords.longitude;
+      console.log(Latitude + '   ' + Longitude);
+      $scope.Latitude = Latitude;
+      $scope.Longitude = Longitude;
     }, function(err) {
       console.log(err);
      // alert('Please turn on your location.');
@@ -61,11 +61,11 @@ meducap.controller('LoginCtrl', function($scope, $http, $ionicHistory,$state,$ti
     },
 
     function(position) {
-      var lat  = position.coords.latitude;
-      var long = position.coords.longitude;
-      console.log(lat + '' + long);
-      $scope.lat = lat;
-      $scope.long = long;
+      var Latitude  = position.coords.latitude;
+      var Longitude = position.coords.longitude;
+      console.log(Latitude + '' + Longitude);
+      $scope.Latitude = Latitude;
+      $scope.Longitude = Longitude;
     }
   );
 
@@ -123,11 +123,11 @@ meducap.controller('EditSchoolCtrl', function($scope, $state,$stateParams,$cordo
 
       .then(function (position) {
         console.log('getting loca');
-        var lat  = position.coords.latitude;
-        var long = position.coords.longitude;
-        console.log(lat + '   ' + long);
-        $scope.school.lat = lat;
-        $scope.school.long = long;
+        var Latitude  = position.coords.latitude;
+        var Longitude = position.coords.longitude;
+        console.log(Latitude + '   ' + Longitude);
+        $scope.school.Latitude = Latitude;
+        $scope.school.Longitude = Longitude;
       }, function(err) {
         console.log(err);
         console.log('Please turn on your location.');
@@ -155,11 +155,11 @@ meducap.controller('EditHospitalCtrl', function($scope, $state,$stateParams,$cor
       .getCurrentPosition(posOptions)
 
       .then(function (position) {
-        var lat  = position.coords.latitude;
-        var long = position.coords.longitude;
-        console.log(lat + '   ' + long);
-        $scope.healthcare.lat = lat;
-        $scope.healthcare.long = long;
+        var Latitude  = position.coords.latitude;
+        var Longitude = position.coords.longitude;
+        console.log(Latitude + '   ' + Longitude);
+        $scope.healthcare.Latitude = Latitude;
+        $scope.healthcare.Longitude = Longitude;
       }, function(err) {
         console.log(err);
         console.log('Please turn on your location.');

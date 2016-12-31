@@ -4,7 +4,8 @@ meducap.controller('AddHospitalCtrl', function($scope,$cordovaGeolocation,$state
   $scope.healthcare.uploadedBy = auth.getUser().username;
 
   $scope.addHospital = function(healthcare){
-    healthcare.timestamp = new Date();
+    healthcare.Timestamp = new Date();
+    healthcare.District = 'Visakhapatnam';
     auth.setArrHospital(healthcare);
     $state.go('home.dash');
   };
@@ -18,11 +19,11 @@ meducap.controller('AddHospitalCtrl', function($scope,$cordovaGeolocation,$state
       .getCurrentPosition(posOptions)
 
       .then(function (position) {
-        var lat  = position.coords.latitude;
-        var long = position.coords.longitude;
-        console.log(lat + '   ' + long);
-        $scope.healthcare.lat = lat;
-        $scope.healthcare.long = long;
+        var Latitude  = position.coords.latitude;
+        var Longitude = position.coords.longitude;
+        console.log(Latitude + '   ' + Longitude);
+        $scope.healthcare.Latitude = Latitude;
+        $scope.healthcare.Longitude = Longitude;
       }, function(err) {
         console.log(err);
         console.log('Please turn on your location.');
