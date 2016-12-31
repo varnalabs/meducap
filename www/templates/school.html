@@ -458,6 +458,37 @@
           </div>
         </label>
       </div>
+      <div class="item item-toggle item-text-wrap">
+        Availability of AFHC or YUVA near school
+        <label class="toggle toggle-balanced">
+          <input type="checkbox" ng-model="school.availabilityAFHC">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Name of AFHC / YUVA</span>
+        <input ng-model="school.nameAFHC" type="text" placeholder="Name of AFHC / YUVA">
+      </label>
+      <label class="item item-input item-floating-label">
+      <span class="input-label">Distance to AFHC / YUVA (in KM)</span>
+      <input ng-model="school.distanceToAFHC" type="number"
+             placeholder="Distance to AFHC / YUVA (in KM)">
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Name of person in charge</span>
+        <input ng-model="school.pocAFHC" type="text" placeholder="Name of person in charge" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Phone Number</span>
+        <input ng-model="school.numberAFHC" type="number" placeholder="Phone Number" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Mode of transport to reach facility</span>
+        <input ng-model="school.transportAFHC" type="text" placeholder="Mode of transport to reach facility" required>
+      </label>
+
       
       <label class="item item-input item-floating-label">
         <span class="input-label">Remarks</span>
