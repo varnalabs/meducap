@@ -5,7 +5,7 @@
       <img src="img/med2.png">
 
       <div class="lojo-text border-0 item">
-        Hospital Details
+        Health Facility Details
       </div>
       <div class="">
         <button ng-click="refreshLocation()" class="button button-default">
@@ -36,25 +36,17 @@
       <label class="item item-input custom item-select">
         <span class="custom-label">Type of health facility</span>
         <select ng-model="healthcare.type" required>
-          <option value="PHC" selected>PHC</option>
-          <option value="UPHC">UPHC</option>
+          <option value="Private" selected>Private</option>
+          <option value="Sub-Centre">Sub-Centre</option>
+          <option value="PHC">PHC</option>
+          <option value="Upgraded PHC">Upgraded PHC</option>
           <option value="CHC">CHC</option>
-          <option value="AH">AH</option>
-          <option value="DH">DH</option>
-          <option value="MCH">MCH</option>
+          <option value="Area Hospital">Area Hospital</option>
+          <option value="District Hospital">District Hospital</option>
+          <option value="Medical College Hospital">Medical College Hospital</option>
+          <option value="Other">Other</option>
         </select>
       </label>
-
-      <label class="item item-input custom item-select">
-        <span class="custom-label">Department</span>
-        <select ng-model="healthcare.department" required>
-          <option value="ZP" selected>ZP</option>
-          <option value="ITDA">ITDA</option>
-          <option value="MPP">MPP</option>
-          <option value="SW">SW</option>
-        </select>
-      </label>
-
 
       <label class="item item-input item-floating-label">
         <span class="input-label">Hamlet</span>
@@ -80,14 +72,33 @@
         <span class="input-label">&nbsp;</span>
         <input  type="text" placeholder="" value="Visakhapatnam, Andhra Pradesh " readonly>
       </label>
+
       <label class="item item-input item-floating-label">
-        <span class="input-label">Phone</span>
-        <input ng-model="healthcare.phone" type="number" placeholder="Phone" required>
+        <span class="input-label">Name of doctor in charge</span>
+        <input ng-model="healthcare.nameDoctor" type="text" placeholder="Name of doctor in charge" required>
+      </label>      
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Phone Number</span>
+        <input ng-model="healthcare.phone" type="number" placeholder="Phone Number" required>
+      </label>
+
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Name of nearest bus stop</span>
+        <input ng-model="healthcare.nearestBusstop" type="text" placeholder="Name of nearest bus stop" required>
+      </label>      
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Distance to bus stop (in KM)</span>
+        <input ng-model="healthcare.distanceToBusstop" type="text" placeholder="Distance to bus stop (in KM)" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Distance to bus-stop (in KM)</span>
-        <input ng-model="healthcare.distanceToBusstop" type="text" placeholder="Distance to bus-stop (in KM)" required>
+        <span class="input-label">Name of nearest bus stand</span>
+        <input ng-model="healthcare.nearestBusstand" type="text" placeholder="Name of nearest bus stand" required>
+      </label>      
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Distance to bus stand (in KM)</span>
+        <input ng-model="healthcare.distanceToBusstand" type="text" placeholder="Distance to bus stand (in KM)" required>
       </label>
+
       <label class="item item-input item-floating-label">
         <span class="input-label">Name of nearest hamlet</span>
         <input ng-model="healthcare.nearestHamlet" type="text" placeholder="Name of nearest hamlet" required>
