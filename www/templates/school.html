@@ -7,7 +7,7 @@
         School Details
       </div>
       <div class="">
-        <button ng-click="refreshLocation()" class="button button-default">
+        <button type="button" ng-click="refreshLocation()" class="button button-default">
           <i class="icon ion-location"></i>
         </button>
       </div>
@@ -17,19 +17,8 @@
     <form name="schoolForm" ng-submit="addSchool(school)" novalidate>
 
 
-    <div class="list padding-top-40 margin-bottom-0">
-      <div class="item item-divider">
-        Interview Info
-      </div>
-      <label class="item item-input item-floating-label">
-        <span class="input-label">
-          Data Collector Code
-        </span>
-        <input type="text" ng-model="school.dataCollectorCode" placeholder="Data Collector Code" required>
 
-      </label>
-    </div>
-    <div class="list margin-bottom-0">
+    <div class="list padding-top-40 margin-bottom-0">
       <div class="item item-divider">
         School Profile
       </div>
@@ -105,7 +94,7 @@
         <span class="input-label">Distance to bus stop (in KM)</span>
         <input ng-model="school.distanceToBusstop" type="text" placeholder="Distance to bus stand (in KM)" required>
       </label>
-      
+
       <label class="item item-input item-floating-label">
         <span class="input-label">Name of nearest bus stand</span>
         <input ng-model="school.nearestBusstand" type="text" placeholder="Name of nearest Bus Stand" required>
@@ -114,7 +103,7 @@
         <span class="input-label">Distance to bus stand (in KM)</span>
         <input ng-model="school.distanceToBusstand" type="text" placeholder="Distance to bus stand (in KM)" required>
       </label>
-      
+
       <label class="item item-input item-floating-label">
         <span class="input-label">Name of nearest hamlet</span>
         <input ng-model="school.nearestHamlet" type="text" placeholder="Name of nearest hamlet" required>
@@ -158,7 +147,7 @@
         <span class="input-label">Number of members in SMC</span>
         <input ng-model="school.SMCnumber" type="number" placeholder="Number of members in SMC" required>
       </label>
-     
+
       <label class="item item-input item-floating-label">
         <span class="input-label">Number of male staff</span>
         <input ng-model="school.numberOfMaleStaff" type="number" placeholder="Number of male staff" required>
@@ -171,7 +160,7 @@
         <span class="input-label">Number of support staff</span>
         <input ng-model="school.numberSupportStaff" type="number" placeholder="Number of support staff" required>
       </label>
-      
+
       <label class="item item-input item-floating-label">
         <span class="input-label">Number of male students</span>
         <input ng-model="school.numberMaleStudents" type="number" placeholder="Number of male students" required>
@@ -188,24 +177,24 @@
         <span class="input-label">Number of girls - Classes 6 to 10</span>
         <input ng-model="school.girls6to10" type="number" placeholder="Number of girls - Classes 6 to 10" required>
       </label>
-      <label class="item item-input item-floating-label">
-        <span class="input-label">Vacation starts on</span>
-        <input ng-model="school.startVacation" type="date" placeholder="Vacation starts on" required>
-      </label>
-      <label class="item item-input item-floating-label">
-        <span class="input-label">Vacation ends on</span>
-        <input ng-model="school.endVacation" type="date" placeholder="Vacation ends on" required>
-      </label>
+      <!--<label class="item item-input item-floating-label">-->
+        <!--<span class="input-label">Vacation starts on</span>-->
+        <!--<input ng-model="school.startVacation" type="date" placeholder="Vacation starts on" required>-->
+      <!--</label>-->
+      <!--<label class="item item-input item-floating-label">-->
+        <!--<span class="input-label">Vacation ends on</span>-->
+        <!--<input ng-model="school.endVacation" type="date" placeholder="Vacation ends on" required>-->
+      <!--</label>-->
 
-      <label class="item item-input item-floating-label">
-        <span class="input-label">Exams starts on</span>
-        <input ng-model="school.startExams" type="date" placeholder="Exams starts on" required>
-      </label>
-      <label class="item item-input item-floating-label">
-        <span class="input-label">Exams ends on</span>
-        <input ng-model="school.endExams" type="date" placeholder="Exams ends on" required>
-      </label>
-      
+      <!--<label class="item item-input item-floating-label">-->
+        <!--<span class="input-label">Exams starts on</span>-->
+        <!--<input ng-model="school.startExams" type="date" placeholder="Exams starts on" required>-->
+      <!--</label>-->
+      <!--<label class="item item-input item-floating-label">-->
+        <!--<span class="input-label">Exams ends on</span>-->
+        <!--<input ng-model="school.endExams" type="date" placeholder="Exams ends on" required>-->
+      <!--</label>-->
+
       <li class="item item-toggle">
         Student Clubs in school
         <label class="toggle toggle-balanced">
@@ -214,7 +203,7 @@
             <div class="handle"></div>
           </div>
         </label>
-      </li>      
+      </li>
       <li class="item item-toggle">
         Parent Teacher Association in school
         <label class="toggle toggle-balanced">
@@ -224,12 +213,12 @@
           </div>
         </label>
       </li>
-   
+
       <label class="item item-input item-floating-label">
         <span class="input-label">Remarks</span>
         <textarea ng-model="school.remarkSd" placeholder="Remarks"></textarea>
       </label>
-    
+
      </div>
 
     <ul class="list margin-bottom-0">
@@ -351,7 +340,7 @@
         <textarea ng-model="school.remarkSf" placeholder="Remarks"></textarea>
       </li>
     </ul>
-      
+
       <div class="item item-toggle item-text-wrap">
         Provision of Sanitary Napkins
         <label class="toggle toggle-balanced">
@@ -397,8 +386,8 @@
           </div>
         </label>
       </div>
-      
-      
+
+
     <div class="list margin-bottom-0">
       <div class="item item-divider">
         Health Facility Details
@@ -489,7 +478,7 @@
         <input ng-model="school.transportAFHC" type="text" placeholder="Mode of transport to reach facility" required>
       </label>
 
-      
+
       <label class="item item-input item-floating-label">
         <span class="input-label">Remarks</span>
         <textarea ng-model="school.remarkMedical" type="text" placeholder="Remarks"></textarea>

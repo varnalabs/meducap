@@ -1,0 +1,31 @@
+<ion-view>
+  <ion-content>
+
+
+    <form name="RouteViewForm" novalidate>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Name of Mandal</span>
+        <input ng-model="route.mandalName" type="text" placeholder="Name of Mandal" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Name of School</span>
+        <input ng-model="route.schoolName" type="text" placeholder="Name of School" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Name of Health Center</span>
+        <input ng-model="route.healthCenter" type="text" placeholder="Name of Health Center" required>
+      </label>
+      <div class="text-center">
+        <div class="fileUpload btn button button-positive btn-primary">
+          <span>Upload Route Image</span>
+          <input type="file" class="upload" />
+        </div>
+      </div>
+
+    </form>
+  </ion-content>
+  <ion-footer-bar class="padding-0">
+    <tabs></tabs>
+  </ion-footer-bar>
+</ion-view>
+

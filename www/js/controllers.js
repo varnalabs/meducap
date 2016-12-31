@@ -168,3 +168,6 @@ meducap.controller('EditHospitalCtrl', function($scope, $state,$stateParams,$cor
 
 
 });
+meducap.controller('RouteViewCtrl', function($scope, $state, $stateParams){
+
+})
