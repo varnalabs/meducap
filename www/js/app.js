@@ -33,7 +33,9 @@ var meducap = angular.module('meducap', ['ionic','ngCordova','firebase'])
       $ionicHistory.goBack();
     }else if ($ionicHistory.currentStateName() === 'home.edit-school'){
       $ionicHistory.goBack();
-    }
+    }else if ($ionicHistory.currentStateName() === 'home.route-view'){
+    $ionicHistory.goBack();
+  }
     else {
       event.preventDefault();
     }
@@ -66,7 +68,13 @@ var meducap = angular.module('meducap', ['ionic','ngCordova','firebase'])
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
 
-
+  var config = {
+    apiKey: "AIzaSyBO12rC_8xRgk7Rggwq45FUCvOhySsnfbw",
+    authDomain: "meducap-449a5.firebaseapp.com",
+    databaseURL: "https://meducap-449a5.firebaseio.com",
+    storageBucket: "meducap-449a5.appspot.com",
+    messagingSenderId: "948310896184"
+  };
   firebase.initializeApp(config);
 
   $stateProvider
@@ -199,6 +207,16 @@ var meducap = angular.module('meducap', ['ionic','ngCordova','firebase'])
         }
       }
     })
+    .state('home.route-view', {
+      url: '/route-view',
+      cache: false,
+      views: {
+        'home': {
+          templateUrl: 'templates/route-view.html',
+          controller: 'RouteViewCtrl'
+        }
+      }
+    })
     .state('home.hospital', {
       url: '/hospital',
       views: {
@@ -213,3 +231,54 @@ var meducap = angular.module('meducap', ['ionic','ngCordova','firebase'])
   $urlRouterProvider.otherwise('/login');
 
 });
+
+meducap.directive("fileread", [function () {
+  return {
+    scope: {
+      fileread: "="
+    },
+    link: function (scope, element, attributes) {
+      element.bind("change", function (changeEvent) {
+      var maxSize = 1024;
+        if(changeEvent.target.files[0].size/1024 > maxSize){
+          return false;
+        }
+      console.log(changeEvent.target.files[0].size);
+
+        var reader = new FileReader();
+        reader.onload = function (loadEvent) {
+          var img = new Image;
+          img.onload = resizeImage;
+          img.src = loadEvent.target.result;
+          function resizeImage() {
+            console.log(this.width);
+            console.log(this.width*0.6);
+            var newDataUri = imageToDataUri(this, this.width*0.6, this.height*0.6);
+            scope.$apply(function () {
+              scope.fileread = newDataUri;
+            });
+          }
+
+        };
+        reader.readAsDataURL(changeEvent.target.files[0]);
+      });
+    }
+  }
+}]);
+function imageToDataUri(img, width, height) {
+
+  // create an off-screen canvas
+  var canvas = document.createElement('canvas'),
+    ctx = canvas.getContext('2d');
+
+  // set its dimension to target size
+  canvas.width = width;
+  canvas.height = height;
+
+  // draw source image into the off-screen canvas:
+  ctx.drawImage(img, 0, 0, width, height);
+
+  // encode image to data-uri with base64 version of compressed image
+  return canvas.toDataURL("image/jpeg", 0.6);
+}
+

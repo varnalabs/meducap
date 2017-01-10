@@ -5,7 +5,7 @@ meducap.factory('auth', function(LSFactory){
   var userId =  '_userId';
   var schoolKey = 'schools';
   var hospitalKey = 'hospitals';
-
+  var routeKey = 'routes';
   var basicAuth = '_basicAuth';
   var lastSyncTime = 'lastSyncTime';
   var AuthAPI = {
@@ -27,6 +27,9 @@ meducap.factory('auth', function(LSFactory){
     getHospital: function(){
       return LSFactory.get(hospitalKey);
     },
+    getRoutes: function() {
+      return LSFactory.get(routeKey);
+    },
     getBasicAuth: function () {
       return LSFactory.get(basicAuth);
     },
@@ -42,6 +45,14 @@ meducap.factory('auth', function(LSFactory){
     setUser: function(user){
       return LSFactory.set(userKey,user)
     },
+    setArrRoute: function(route){
+      var routes = this.getRoutes();
+      if(!routes || routes == null) {
+        routes = [];
+      }
+      routes.push(routes);
+      return LSFactory.set(routeKey, routes);
+    },
     setArrSchool: function(school){
       var schools = this.getSchools();
       if(!schools || schools == null) {
@@ -49,6 +60,9 @@ meducap.factory('auth', function(LSFactory){
       }
       schools.push(school);
       return LSFactory.set(schoolKey, schools);
+    },
+    resetArrRoute: function(routes) {
+      return LSFactory.set(routeKey, routes);
     },
     resetArrSchool: function(schools) {
       return LSFactory.set(schoolKey, schools);
@@ -88,12 +102,16 @@ meducap.factory('auth', function(LSFactory){
     deleteHospitals: function(){
       LSFactory.delete(hospitalKey);
     },
+    deleteRoutes: function(){
+      LSFactory.delete(routeKey);
+    },
     deleteAuth: function(){
       LSFactory.delete(userKey);
       LSFactory.delete(passcode);
       LSFactory.delete(tokenKey);
       LSFactory.delete(basicAuth);
       LSFactory.delete(userId);
+      LSFactory.delete(routeKey);
 
     }
 

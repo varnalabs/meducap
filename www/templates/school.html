@@ -28,11 +28,11 @@
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Latitude</span>
-        <input type="text" ng-model="school.Latitude" placeholder="Latitude" required>
+        <input type="text" ng-model="school.Latitude" placeholder="Latitude" required readonly>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Longitude</span>
-        <input type="text" ng-model="school.Longitude" placeholder="Longitude" required>
+        <input type="text" ng-model="school.Longitude" placeholder="Longitude" required readonly>
       </label>
 
 
@@ -92,7 +92,7 @@
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Distance to bus stop (in KM)</span>
-        <input ng-model="school.BusstopDistance" type="text" placeholder="Distance to bus stand (in KM)" required>
+        <input ng-model="school.BusstopDistance" type="text" placeholder="Distance to bus stop (in KM)" required>
       </label>
 
       <label class="item item-input item-floating-label">
@@ -136,7 +136,7 @@
 
       <label class="item item-input item-floating-label">
         <span class="input-label">Mandal Education Officer Name</span>
-        <input ng-model="school.MEOName" type="text" placeholder="Mandal Education Office Name" required>
+        <input ng-model="school.MEOName" type="text" placeholder="Mandal Education Officer Name" required>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Mandal Education Officer Number</span>
@@ -204,7 +204,7 @@
           </div>
         </label>
       </li>
-      <li class="item item-toggle">
+      <li class="item item-toggle item-text-wrap">
         Parent Teacher Association in school
         <label class="toggle toggle-balanced">
           <input type="checkbox" ng-model="school.PTAssociation" >
@@ -234,7 +234,7 @@
           </div>
         </label>
       </li>
-      <li class="item item-toggle">
+      <li class="item item-toggle item-text-wrap">
         Overhead Tank for drinking water
         <label class="toggle toggle-balanced">
           <input type="checkbox" ng-model="school.OverheadTankDW">
@@ -457,15 +457,15 @@
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Name of person in charge</span>
-        <input ng-model="school.AFHCPoC" type="text" placeholder="Name of person in charge" required>
+        <input ng-model="school.AFHCPoC" type="text" placeholder="Name of person in charge">
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Phone Number</span>
-        <input ng-model="school.AFHCPhone" type="number" placeholder="Phone Number" required>
+        <input ng-model="school.AFHCPhone" type="number" placeholder="Phone Number">
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Mode of transport to reach facility</span>
-        <input ng-model="school.AFHCCommute" type="text" placeholder="Mode of transport to reach facility" required>
+        <input ng-model="school.AFHCCommute" type="text" placeholder="Mode of transport to reach facility">
       </label>
 
 

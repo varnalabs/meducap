@@ -2,25 +2,59 @@
   <ion-content>
 
 
-    <form name="RouteViewForm" novalidate>
-      <label class="item item-input item-floating-label">
-        <span class="input-label">Name of Mandal</span>
-        <input ng-model="route.mandalName" type="text" placeholder="Name of Mandal" required>
-      </label>
-      <label class="item item-input item-floating-label">
-        <span class="input-label">Name of School</span>
-        <input ng-model="route.schoolName" type="text" placeholder="Name of School" required>
-      </label>
-      <label class="item item-input item-floating-label">
-        <span class="input-label">Name of Health Center</span>
-        <input ng-model="route.healthCenter" type="text" placeholder="Name of Health Center" required>
-      </label>
-      <div class="text-center">
-        <div class="fileUpload btn button button-positive btn-primary">
-          <span>Upload Route Image</span>
-          <input type="file" class="upload" />
+    <form name="RouteViewForm" novalidate ng-submit="submitRoute(route)">
+      <div class="list text-center padding-top-50">
+        <img src="img/route.png">
+
+        <div class="lojo-text border-0 item">
+          Route Details
         </div>
+
       </div>
+      <label class="item item-input custom item-select">
+        <span class="custom-label">Route Type</span>
+        <select>
+          <option>School-School</option>
+          <option>Hospital-School</option>
+          <option>School-School</option>
+        </select>
+      </label>
+
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Starting Point</span>
+        <input ng-model="route.startingPoint" type="text" placeholder="Starting Point" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Ending Point</span>
+        <input ng-model="route.endingPoint" type="text" placeholder="Ending Point" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Latitude</span>
+        <input ng-model="routeCoordinates.latitude" type="text" placeholder="Latitude" readonly>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Longitude</span>
+        <input ng-model="routeCoordinates.longitude" type="text" placeholder="Longitude" readonly>
+      </label>
+      <div class="item text-center">
+        <button type="button" class="button refresh-location-btn button-calm" ng-click="refreshLocation()">
+          <i class="icon ion-refresh"></i>
+        </button>
+      </div>
+      <div class="text-center padding-top-20">
+        <button type="submit" ng-disabled="RouteViewForm.$invalid" class="button button-positive button-full">Save</button>
+      </div>
+      <!--<div class="text-center">-->
+        <!--<div class="fileUpload btn button button-stable btn-primary">-->
+          <!--<span>Upload Route Image</span>-->
+          <!--<input type="file" class="upload" fileread="route.routeImage" required/>-->
+        <!--</div>-->
+        <!--<div>(Max size 1MB)</div>-->
+      <!--</div>-->
+      <!--<div class="text-center">-->
+      <!--<img class="full-image" ng-show="route.routeImage" ng-src="{{route.routeImage}}" >-->
+    <!--</div>-->
+
 
     </form>
   </ion-content>

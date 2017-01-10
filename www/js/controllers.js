@@ -1,4 +1,4 @@
-meducap.controller('LoginCtrl', function($scope, $http, $ionicHistory,$state,$timeout,$cordovaGeolocation, auth) {
+meducap.controller('LoginCtrl', function($scope, $http, $ionicHistory,$state, $timeout, $cordovaGeolocation, auth) {
   $scope.errorLogin = false;
   if(auth.isLoggedIn()){
     $ionicHistory.nextViewOptions({
@@ -168,6 +168,51 @@ meducap.controller('EditHospitalCtrl', function($scope, $state,$stateParams,$cor
 
 
 });
-meducap.controller('RouteViewCtrl', function($scope, $state, $stateParams){
+meducap.controller('RouteViewCtrl', function($scope,
+                                             $state,
+                                             $stateParams,
+                                             $firebaseArray,
+                                             $ionicLoading,
+                                             $cordovaGeolocation){
 
-})
+  $scope.route = {};
+  $scope.route.LatLongsOfPath= [];
+
+  $scope.refreshLocation = function () {
+    var posOptions = {timeout: 10000, enableHighAccuracy: false};
+    $cordovaGeolocation
+      .getCurrentPosition(posOptions)
+
+      .then(function (position) {
+        var Latitude  = position.coords.latitude;
+        var Longitude = position.coords.longitude;
+        $scope.routeCoordinates = {};
+        console.log(Latitude + '   ' + Longitude);
+        $scope.routeCoordinates.latitude = Latitude;
+        $scope.routeCoordinates.longitude = Longitude;
+        $scope.route.LatLongsOfPath.push($scope.routeCoordinates)
+
+      }, function(err) {
+        console.log(err);
+        console.log('Please turn on your location.');
+      });
+  };
+
+  $scope.refreshLocation();
+
+  $scope.submitRoute = function(route){
+    route.Timestamp = new Date();
+    auth.setArrRoute(route);
+    $state.go('home.dash');
+
+    //$ionicLoading.show();
+    //  routeDb.$add(route).then(function(ref){
+    //    console.log(ref.key + ' has been added');
+    //    $scope.route = {};
+    //    $ionicLoading.hide();
+    //  })
+
+  }
+
+
+});
