@@ -16,12 +16,51 @@
 
     <form name="schoolForm" ng-submit="addSchool(school)" novalidate>
 
+      <div class="list padding-top-40 margin-bottom-0">
+        <div class="item item-divider">
+          Interview Information
+        </div>
+        <label class="item item-input item-floating-label">
+          <span class="input-label" >Name of the person collecting data</span>
+          <input type="text" ng-model="school.s1Interviewer" placeholder="Name of the person collecting data" required>
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label" >Contact Number</span>
+          <input type="number" ng-model="school.s2ContactInterviewer" placeholder="Contact Number" required>
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label" >Starting Time</span>
+          <input type="text" ng-model="school.s3StartingTime" placeholder="Starting Time" required readonly>
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label" >Ending Time</span>
+          <input type="text" ng-model="school.s4EndingTime" placeholder="Ending Time"  readonly>
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="" >Data Collection Date</span>
+          <div class="">
+            {{school.s5DataCollectionDate | date}}
+          </div>
+        </label>
+       </div>
 
-
-    <div class="list padding-top-40 margin-bottom-0">
+    <div class="list margin-bottom-0">
       <div class="item item-divider">
         School Profile
       </div>
+      <div class="item item-text-wrap">
+        <b>Instructions:</b>
+        <div>a) Select the right responses from the choices given.</div>
+        <div>b) To be asked from the principal or headmaster or senior school teacher.</div>
+      </div>
+      <label class="item item-input item-floating-label">
+        <span class="input-label" >Name of the respondent</span>
+        <input type="text" ng-model="school.s6Interviewee" placeholder="Name of the respondent" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label" >Contact Number</span>
+        <input type="number" ng-model="school.s6ContactRespondent" placeholder="Contact Number" required>
+      </label>
       <label class="item item-input item-floating-label">
         <span class="input-label" >School Name</span>
         <input type="text" ng-model="school.Name" placeholder="School Name" required>

@@ -2,6 +2,8 @@ meducap.controller('AddSchoolCtrl', function($scope,$cordovaGeolocation,$state, 
   $scope.school = {};
   $scope.school.uploadedBy = auth.getUser().username;
   //$scope.school.drinkingWater = true;
+$scope.school.s3StartingTime = new Date();
+$scope.school.s5DataCollectionDate = new Date();
 
 $scope.school.StudentClubs = false;
 $scope.school.PTAssociation = false;
@@ -31,7 +33,7 @@ $scope.school.AFHCorYUVA = false;
   console.log(auth.getSchools());
 
   $scope.addSchool = function(school){
-    school.Timestamp = new Date();
+    school.s4EndingTime = new Date();
     school.District = 'Visakhapatnam';
     auth.setArrSchool(school);
     $state.go('home.dash');
