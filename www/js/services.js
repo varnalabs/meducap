@@ -50,7 +50,7 @@ meducap.factory('auth', function(LSFactory){
       if(!routes || routes == null) {
         routes = [];
       }
-      routes.push(routes);
+      routes.push(route);
       return LSFactory.set(routeKey, routes);
     },
     setArrSchool: function(school){
