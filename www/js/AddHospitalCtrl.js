@@ -5,7 +5,7 @@ meducap.controller('AddHospitalCtrl', function($scope,$cordovaGeolocation,$state
 
   $scope.addHospital = function(healthcare){
     healthcare.Timestamp = new Date();
-    healthcare.h10District = 'Visakhapatnam';
+    healthcare.h010District = 'Visakhapatnam';
     auth.setArrHospital(healthcare);
     $state.go('home.dash');
   };
