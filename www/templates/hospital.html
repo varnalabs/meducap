@@ -18,10 +18,15 @@
     <div class="list padding-top-40 margin-bottom-0">
       <div class="item item-divider">
         Health Facility Details
+      </div> <div class="item item-text-wrap">
+        <b>Instructions:</b>
+        <div>a) Select the right responses from the choices given.</div>
+        <div>b) To be asked from the principal or headmaster or school teacher.</div>
       </div>
+
       <label class="item item-input item-floating-label">
         <span class="input-label" >Health Facility Name</span>
-        <input type="text" ng-model="healthcare.Name" placeholder="Health Facility Name" required>
+        <input type="text" ng-model="healthcare.h1Name" placeholder="Health Facility Name" required>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Latitude</span>
@@ -35,7 +40,7 @@
 
       <label class="item item-input custom item-select">
         <span class="custom-label">Type of health facility</span>
-        <select ng-model="healthcare.Type" required>
+        <select ng-model="healthcare.h4Type" required>
           <option value="Private" selected>Private</option>
           <option value="Sub-Centre">Sub-Centre</option>
           <option value="PHC">PHC</option>
@@ -44,29 +49,29 @@
           <option value="Area Hospital">Area Hospital</option>
           <option value="District Hospital">District Hospital</option>
           <option value="Medical College Hospital">Medical College Hospital</option>
-          <option value="Other">Other</option>
+          <option value="Other">Any Other</option>
         </select>
       </label>
 
       <label class="item item-input item-floating-label">
         <span class="input-label">Hamlet</span>
-        <input ng-model="healthcare.Hamlet" type="text" placeholder="Hamlet" required>
+        <input ng-model="healthcare.h5Hamlet" type="text" placeholder="Hamlet" required>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Landmark</span>
-        <input ng-model="healthcare.Landmark" type="text" placeholder="Landmark" required>
+        <input ng-model="healthcare.h6Landmark" type="text" placeholder="Landmark" required>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Panchayat</span>
-        <input ng-model="healthcare.Panchayat" type="text" placeholder="Panchayat" required>
+        <input ng-model="healthcare.h7Panchayat" type="text" placeholder="Panchayat" required>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Mandal</span>
-        <input ng-model="healthcare.Mandal" type="text" placeholder="Mandal" required>
+        <input ng-model="healthcare.h8Mandal" type="text" placeholder="Mandal" required>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Pin Code</span>
-        <input ng-model="healthcare.PinCode" type="number" placeholder="Pin Code" required>
+        <input ng-model="healthcare.h9PinCode" type="number" placeholder="Pin Code" required>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">&nbsp;</span>
@@ -75,51 +80,44 @@
 
       <label class="item item-input item-floating-label">
         <span class="input-label">Name of doctor in charge</span>
-        <input ng-model="healthcare.DoctorName" type="text" placeholder="Name of doctor in charge" required>
+        <input ng-model="healthcare.h2DoctorName" type="text" placeholder="Name of doctor in charge" required>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Phone Number</span>
-        <input ng-model="healthcare.Phone" type="number" placeholder="Phone Number" required>
+        <input ng-model="healthcare.h3Phone" type="number" placeholder="Phone Number" required>
       </label>
 
       <label class="item item-input item-floating-label">
         <span class="input-label">Name of nearest bus stop</span>
-        <input ng-model="healthcare.BusstopName" type="text" placeholder="Name of nearest bus stop" required>
+        <input ng-model="healthcare.h13BusstopName" type="text" placeholder="Name of nearest bus stop" required>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Distance to bus stop (in KM)</span>
-        <input ng-model="healthcare.BusstopDistance" type="text" placeholder="Distance to bus stop (in KM)" required>
+        <input ng-model="healthcare.h14BusstopDistance" type="number" placeholder="Distance to bus stop (in KM)" required>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Name of nearest bus stand</span>
-        <input ng-model="healthcare.BusstandName" type="text" placeholder="Name of nearest bus stand" required>
+        <input ng-model="healthcare.h11BusstandName" type="text" placeholder="Name of nearest bus stand" required>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Distance to bus stand (in KM)</span>
-        <input ng-model="healthcare.BusstandDistance" type="text" placeholder="Distance to bus stand (in KM)" required>
+        <input ng-model="healthcare.h12BusstandDistance" type="number" placeholder="Distance to bus stand (in KM)" required>
       </label>
-
-      <label class="item item-input item-floating-label">
-        <span class="input-label">Name of nearest hamlet</span>
-        <input ng-model="healthcare.HamletName" type="text" placeholder="Name of nearest hamlet" required>
-      </label>
-      <label class="item item-input item-floating-label">
-        <span class="input-label">Distance to nearest hamlet (in KM)</span>
-        <input ng-model="healthcare.HamletDistance" type="number"
-               placeholder="Distance to nearest hamlet (in KM)" required>
-      </label>
-
-      <label class="item item-input item-floating-label">
-        <span class="input-label">Remarks</span>
-        <textarea ng-model="healthcare.remarkLd" placeholder="Remarks"></textarea>
-      </label>
+      <div class="item item-toggle item-text-wrap">
+        Is there a AFHC/Yuva CLinic at the health facility
+        <label class="toggle toggle-balanced">
+          <input type="checkbox" ng-model="healthcare.h15AFHC">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
 
     </div>
 
       <button ng-disabled="hospitalForm.$invalid" class="button button-positive button-full margin-0 sign-btn">Save</button>
+  </div>
 
-
-</form>
+  </form>
 
   </ion-content>
 

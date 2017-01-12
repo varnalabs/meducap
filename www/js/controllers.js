@@ -173,6 +173,7 @@ meducap.controller('RouteViewCtrl', function($scope,
                                              $stateParams,
                                              $firebaseArray,
                                              $ionicLoading,
+                                             auth,
                                              $cordovaGeolocation){
 
   $scope.route = {};

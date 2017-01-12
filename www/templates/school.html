@@ -55,15 +55,15 @@
       </div>
       <label class="item item-input item-floating-label">
         <span class="input-label" >Name of the respondent</span>
-        <input type="text" ng-model="school.s6Interviewee" placeholder="Name of the respondent" required>
+        <input type="text" ng-model="school.s6Respondent" placeholder="Name of the respondent" required>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label" >Contact Number</span>
-        <input type="number" ng-model="school.s6ContactRespondent" placeholder="Contact Number" required>
+        <input type="number" ng-model="school.s7ContactRespondent" placeholder="Contact Number" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label" >School Name</span>
-        <input type="text" ng-model="school.Name" placeholder="School Name" required>
+        <span class="input-label" >Name of the school</span>
+        <input type="text" ng-model="school.s8SchoolName" placeholder="Name of the school" required>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Latitude</span>
@@ -76,18 +76,17 @@
 
 
       <label class="item item-input custom item-select">
-        <span class="custom-label">School Type</span>
-        <select ng-model="school.Type" required>
+        <span class="custom-label">Type of School</span>
+        <select ng-model="school.s9SchoolType" required>
           <option value="Primary" selected>Primary</option>
           <option value="Upper Primary">Upper Primary</option>
           <option value="High School">High School</option>
-          <option value="Gurukula Pathshala">Gurukula Pathsahala</option>
         </select>
       </label>
 
       <label class="item item-input custom item-select">
         <span class="custom-label">Administrative Department</span>
-        <select ng-model="school.Department" required>
+        <select ng-model="school.s10AdminDepartment" required>
           <option value="Zilla Parishad" selected>Zilla Parishad</option>
           <option value="ITDA Mandal">ITDA Mandal</option>
           <option value="Praja Parishad">Praja Parishad</option>
@@ -97,126 +96,242 @@
 
 
       <label class="item item-input item-floating-label">
-        <span class="input-label">Hamlet</span>
-        <input ng-model="school.Hamlet" type="text" placeholder="Hamlet" required>
+        <span class="input-label">Hamlet Name</span>
+        <input ng-model="school.s11Hamlet" type="text" placeholder="Hamlet Name" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Landmark</span>
-        <input ng-model="school.Landmark" type="text" placeholder="Landmark" required>
+        <span class="input-label">Nearest Landmark</span>
+        <input ng-model="school.s12Landmark" type="text" placeholder="Nearest Landmark" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Panchayat</span>
-        <input ng-model="school.Panchayat" type="text" placeholder="Panchayat" required>
+        <span class="input-label">Village Panchayat</span>
+        <input ng-model="school.s13Panchayat" type="text" placeholder="Village Panchayat" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Mandal</span>
-        <input ng-model="school.Mandal" type="text" placeholder="Mandal" required>
+        <span class="input-label">Mandal Name</span>
+        <input ng-model="school.s14Mandal" type="text" placeholder="Mandal Name" required>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Pin Code</span>
-        <input ng-model="school.PinCode" type="number" placeholder="Pin Code" required>
+        <input ng-model="school.s15PinCode" type="number" placeholder="Pin Code" required>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">&nbsp;</span>
         <input  type="text" placeholder="" value="Visakhapatnam, Andhra Pradesh " readonly>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Phone Number</span>
-        <input ng-model="school.SchoolPhone" type="number" placeholder="Phone" required>
+        <span class="input-label">School Contact Number</span>
+        <input ng-model="school.s17SchoolPhone" type="number" placeholder="School Contact Number" required>
       </label>
 
-      <label class="item item-input item-floating-label">
-        <span class="input-label">Name of nearest bus stop</span>
-        <input ng-model="school.BusstopName" type="text" placeholder="Name of nearest Bus Stop" required>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">School starts at</span>
+        <input ng-model="school.s18SchoolStartTime" type="time" placeholder="School starts at" required>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">School ends at</span>
+        <input ng-model="school.s19SchoolEndTime" type="time" placeholder="School ends at" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Distance to bus stop (in KM)</span>
-        <input ng-model="school.BusstopDistance" type="text" placeholder="Distance to bus stop (in KM)" required>
+        <span class="input-label">Which Saturdays are working</span>
+        <input ng-model="school.s20SchoolSaturdays" type="text" placeholder="Which Saturdays are working" required>
       </label>
 
       <label class="item item-input item-floating-label">
         <span class="input-label">Name of nearest bus stand</span>
-        <input ng-model="school.BusstandName" type="text" placeholder="Name of nearest Bus Stand" required>
+        <input ng-model="school.s21BusstandName" type="text" placeholder="Name of nearest Bus stand" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Distance to bus stand (in KM)</span>
-        <input ng-model="school.BusstandDistance" type="text" placeholder="Distance to bus stand (in KM)" required>
+        <span class="input-label">Distance to nearest bus stand (in KM)</span>
+        <input ng-model="school.s22BusstandDistance" type="number" placeholder="Distance to nearest bus stand (in KM)" required>
+      </label>
+
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Name of nearest bus stop</span>
+        <input ng-model="school.s23BusstopName" type="text" placeholder="Name of nearest bus stop" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Distance to nearest bus stop (in KM)</span>
+        <input ng-model="school.s24BusstopDistance" type="number" placeholder="Distance to bus stop (in KM)" required>
       </label>
 
       <label class="item item-input item-floating-label">
         <span class="input-label">Name of nearest hamlet</span>
-        <input ng-model="school.HamletName" type="text" placeholder="Name of nearest hamlet" required>
+        <input ng-model="school.s25NearestHamlet" type="text" placeholder="Name of nearest hamlet" required>
       </label>
       <label class="item item-input item-floating-label">
       <span class="input-label">Distance to nearest hamlet (in KM)</span>
-      <input ng-model="school.HamletDistance" type="number"
+      <input ng-model="school.s26HamletDistance" type="number"
              placeholder="Distance to nearest hamlet (in KM)" required>
-      </label>
-
-      <label class="item item-input item-floating-label">
-        <span class="input-label">Remarks</span>
-        <textarea ng-model="school.RemarksProfile" placeholder="Remarks"></textarea>
       </label>
 
     </div>
 
     <div class="list margin-bottom-0">
-      <div class="item item-divider">
-        Personnel Details
-      </div>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Point of contact Name</span>
-        <input ng-model="school.POCName" type="text" placeholder="Point of contact" required>
+        <span class="input-label">Name of the Principal or Headmaster</span>
+        <input ng-model="school.s27PrincipalName" type="text" placeholder="Name of the Principal or Headmaster" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Point of contact Number</span>
-        <input ng-model="school.POCNumber" type="number" placeholder="Point of contact number" required>
+        <span class="input-label">Principal/Headmaster contact number</span>
+        <input ng-model="school.s28ContactPrincipal" type="number" placeholder="Principal/Headmaster contact number" required>
       </label>
 
       <label class="item item-input item-floating-label">
-        <span class="input-label">Mandal Education Officer Name</span>
-        <input ng-model="school.MEOName" type="text" placeholder="Mandal Education Officer Name" required>
+        <span class="input-label">Name of the Mandal Education Officer (MEO)</span>
+        <input ng-model="school.s29MEOName" type="text" placeholder="Name of the Mandal Education Officer" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Mandal Education Officer Number</span>
-        <input ng-model="school.MEONumber" type="number" placeholder="Mandal Education Officer Number" required>
+        <span class="input-label">MEO contact number</span>
+        <input ng-model="school.s30MEONumber" type="number" placeholder="MEO contact number" required>
       </label>
 
       <label class="item item-input item-floating-label">
-        <span class="input-label">Strength of SMC</span>
-        <input ng-model="school.SMCStrength" type="number" placeholder="Strength of SMC" required>
+        <span class="input-label">Number of members in School Management</span>
+        <input ng-model="school.s31SMCStrength" type="number" placeholder="Number of members in School Management" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Name of SMC member 1</span>
+        <input ng-model="school.s32SMCName1" type="text" placeholder="Name of SMC member 1" required>
+     </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Designation of SMC member 1</span>
+        <input ng-model="school.s33SMCDesignation1" type="text" placeholder="Designation of SMC member 1" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Contact of SMC member 1</span>
+        <input ng-model="school.s34SMCContact1" type="number" placeholder="Contact of SMC member 1" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Name of SMC member 2</span>
+        <input ng-model="school.s35SMCName2" type="text" placeholder="Name of SMC member 2" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Designation of SMC member 2</span>
+        <input ng-model="school.s36SMCDesignation2" type="text" placeholder="Designation of SMC member 2" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Contact of SMC member 2</span>
+        <input ng-model="school.s37SMCContact2" type="number" placeholder="Contact of SMC member 2" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Name of SMC member 3</span>
+        <input ng-model="school.s38SMCName3" type="text" placeholder="Name of SMC member 3" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Designation of SMC member 3</span>
+        <input ng-model="school.s39SMCDesignation3" type="text" placeholder="Designation of SMC member 3" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Contact of SMC member 3</span>
+        <input ng-model="school.s40SMCContact3" type="number" placeholder="Contact of SMC member 3" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Number of teachers - Total</span>
+        <input ng-model="school.s41TeachersTotal" type="number" placeholder="Number of teachers - Total" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Number of teachers - Male</span>
+        <input ng-model="school.s41TeachersMale" type="number" placeholder="Number of teachers - Male" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Number of teachers - Female</span>
+        <input ng-model="school.s42TeachersFemale" type="number" placeholder="Number of teachers - Female" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Number of other staff - Male</span>
+        <input ng-model="school.s43OtherStaffMale" type="number" placeholder="Number of other staff - Male" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Number of other staff - Female</span>
+        <input ng-model="school.s44OtherStaffMale" type="number" placeholder="Number of other staff - Female" required>
       </label>
 
       <label class="item item-input item-floating-label">
-        <span class="input-label">Strength of male staff</span>
-        <input ng-model="school.MaleStaff" type="number" placeholder="Strength of male staff" required>
+        <span class="input-label">Student strength - Total</span>
+        <input ng-model="school.s45StudentsTotal" type="number" placeholder="Student Strength - Total" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Strength of female staff</span>
-        <input ng-model="school.FemaleStaff" type="number" placeholder="Strength of female staff" required>
+        <span class="input-label">Student strength - Male</span>
+      <input ng-model="school.s46StudentsMale" type="number" placeholder="Student Strength - Male" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Strength of support staff</span>
-        <input ng-model="school.SupportStaff" type="number" placeholder="Strength of support staff" required>
+        <span class="input-label">Student strength - Female</span>
+        <input ng-model="school.s47StudentsFemale" type="number" placeholder="Student Strength - Female" required>
       </label>
 
       <label class="item item-input item-floating-label">
-        <span class="input-label">Strength of male students</span>
-        <input ng-model="school.MaleStudents" type="number" placeholder="Strength of male students" required>
+        <span class="input-label">Student Strength in Grade 6 - Male</span>
+        <input ng-model="school.s48StudentsMale6" type="number" placeholder="Student Strength in Grade 6 - Male" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Strength of female students</span>
-        <input ng-model="school.FemaleStudents" type="number" placeholder="Strength of female students" required>
+        <span class="input-label">Student Strength in Grade 6 - Female</span>
+        <input ng-model="school.s49StudentsFemale6" type="number" placeholder="Student Strength in Grade 6 - Female" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Strength of boys - Classes 6 to 10</span>
-        <input ng-model="school.Boys6to10" type="number" placeholder="Strength of boys - Classes 6 to 10" required>
+        <span class="input-label">Student Strength in Grade 7 - Male</span>
+        <input ng-model="school.s50StudentsMale7" type="number" placeholder="Student Strength in Grade 7 - Male" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Strength of girls - Classes 6 to 10</span>
-        <input ng-model="school.Girls6to10" type="number" placeholder="Strength of girls - Classes 6 to 10" required>
+        <span class="input-label">Student Strength in Grade 7 - Female</span>
+        <input ng-model="school.s51StudentsFemale7" type="number" placeholder="Student Strength in Grade 7 - Female" required>
       </label>
-      <!--<label class="item item-input item-floating-label">-->
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Student Strength in Grade 8 - Male</span>
+        <input ng-model="school.s52StudentsMale8" type="number" placeholder="Student Strength in Grade 8 - Male" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Student Strength in Grade 8 - Female</span>
+        <input ng-model="school.s53StudentsFemale8" type="number" placeholder="Student Strength in Grade 8 - Female" required>
+     </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Student Strength in Grade 9 - Male</span>
+        <input ng-model="school.s54StudentsMale9" type="number" placeholder="Student Strength in Grade 9 - Male" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Student Strength in Grade 9 - Female</span>
+        <input ng-model="school.s55StudentsFemale9" type="number" placeholder="Student Strength in Grade 9 - Female" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Student Strength in Grade 10 - Male</span>
+        <input ng-model="school.s56StudentsMale10" type="number" placeholder="Student Strength in Grade 10 - Male" required>
+      </label>
+
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Vacation 1 - From</span>
+        <input ng-model="school.s57Vacation1From" type="date" placeholder="Vacation 1 - From" required>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Vacation 1 - To</span>
+        <input ng-model="school.s58Vacation1To" type="date" placeholder="Vacation 1 - To" required>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Vacation 2 - From</span>
+        <input ng-model="school.s57Vacation2From" type="date" placeholder="Vacation 2 - From" required>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Vacation 2 - To</span>
+        <input ng-model="school.s58Vacation2To" type="date" placeholder="Vacation 2 - To" required>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Vacation 3 - From</span>
+        <input ng-model="school.s57Vacation3From" type="date" placeholder="Vacation 3 - From" required>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Vacation 3 - To</span>
+        <input ng-model="school.s58Vacation3To" type="date" placeholder="Vacation 3 - To" required>
+      </label>
+
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Final Examination - From</span>
+        <input ng-model="school.s59ExamsFrom" type="date" placeholder="Final Examination - From" required>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Final Examination - To</span>
+        <input ng-model="school.s60ExamsTo" type="date" placeholder="Final Examination - To" required>
+      </label>
+
+       <!--<label class="item item-input item-floating-label">-->
         <!--<span class="input-label">Vacation starts on</span>-->
         <!--<input ng-model="school.startVacation" type="date" placeholder="Vacation starts on" required>-->
       <!--</label>-->
@@ -237,7 +352,7 @@
       <li class="item item-toggle">
         Student Clubs in school
         <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="school.StudentClubs" >
+          <input type="checkbox" ng-model="school.s61StudentClubs" >
           <div class="track">
             <div class="handle"></div>
           </div>
@@ -246,28 +361,27 @@
       <li class="item item-toggle item-text-wrap">
         Parent Teacher Association in school
         <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="school.PTAssociation" >
+          <input type="checkbox" ng-model="school.s62PTAssociation" >
           <div class="track">
             <div class="handle"></div>
           </div>
         </label>
       </li>
-
-      <label class="item item-input item-floating-label">
-        <span class="input-label">RemarksPersonnel</span>
-        <textarea ng-model="school.remarkSd" placeholder="Remarks"></textarea>
-      </label>
-
      </div>
 
     <ul class="list margin-bottom-0">
       <div class="item item-divider">
-        School Facilities
+        Operational Details
+        </div>
+        <div class="item item-text-wrap">
+        <b>Instructions:</b>
+        <div>a) Select the right responses from the choices given</div>
+        <div>b) To be observed and checked by field investigator him/herself</div>
       </div>
       <li class="item item-toggle">
-        Drinking Water
+        Drinking Water Facility
         <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="school.DrinkingWater" >
+          <input type="checkbox" ng-model="school.s63DrinkingWater" >
           <div class="track">
             <div class="handle"></div>
           </div>
@@ -276,7 +390,7 @@
       <li class="item item-toggle item-text-wrap">
         Overhead Tank for drinking water
         <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="school.OverheadTankDW">
+          <input type="checkbox" ng-model="school.s64OverheadTankDW">
           <div class="track">
             <div class="handle"></div>
           </div>
@@ -285,7 +399,7 @@
       <li class="item item-toggle">
         Water Filter
         <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="school.WaterFilter">
+          <input type="checkbox" ng-model="school.s65WaterFilter">
           <div class="track">
             <div class="handle"></div>
           </div>
@@ -294,7 +408,16 @@
       <li class="item item-toggle">
          Toilet Facility
         <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="school.Toilet">
+          <input type="checkbox" ng-model="school.s66Toilet">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+      <li class="item item-toggle">
+        Separate Boy's Toilet
+        <label class="toggle toggle-balanced">
+          <input type="checkbox" ng-model="school.s67BoysToilet">
           <div class="track">
             <div class="handle"></div>
           </div>
@@ -303,7 +426,7 @@
       <li class="item item-toggle">
         Separate Girl's Toilet
         <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="school.GirlsToilet">
+          <input type="checkbox" ng-model="school.s68GirlsToilet">
           <div class="track">
             <div class="handle"></div>
           </div>
@@ -312,205 +435,237 @@
       <li class="item item-toggle">
         Doors can be locked
         <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="school.ToiletLock">
+          <input type="checkbox" ng-model="school.s69ToiletLock">
           <div class="track">
             <div class="handle"></div>
           </div>
         </label>
       </li>
-      <li class="item item-toggle">
-        Running Water in Toilets
+      <li class="item item-toggle item-text-wrap">
+        Water Provision in Toilets
         <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="school.ToiletRW">
+          <input type="checkbox" ng-model="school.s70ToiletWater">
           <div class="track">
             <div class="handle"></div>
           </div>
         </label>
       </li>
-      <li class="item item-toggle">
-       Functional Motor Pump
+      <li class="item item-toggle item-text-wrap">
+       Water provision through Functional Motor Pump
         <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="school.MotorPump">
+          <input type="checkbox" ng-model="school.s71MotorPump">
           <div class="track">
             <div class="handle"></div>
           </div>
         </label>
       </li>
-      <li class="item item-toggle">
-       Running Tap Water
+      <li class="item item-toggle item-text-wrap">
+       Wash basin with running water
         <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="school.TapWater">
+          <input type="checkbox" ng-model="school.s72Washbasin">
           <div class="track">
             <div class="handle"></div>
           </div>
         </label>
       </li>
-      <li class="item item-toggle">
-       Overhead Tank for Tap Water
+      <li class="item item-toggle item-text-wrap">
+       Overhead Tank for toilets and washbasin
         <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="school.OverheadTankTW">
+          <input type="checkbox" ng-model="school.s73OverheadTankTW">
           <div class="track">
             <div class="handle"></div>
           </div>
         </label>
       </li>
+      <li class="item item-toggle item-text-wrap">
+        Provision of sanitary napkins
+        <label class="toggle toggle-balanced">
+          <input type="checkbox" ng-model="school.s74SanitaryNapkins">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+      <li class="item item-toggle item-text-wrap">
+        Availability of sanitary napkin vending machine in girls toilet
+        <label class="toggle toggle-balanced">
+          <input type="checkbox" ng-model="school.s75SanitaryNapkinMachines">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </li>
+        <!--</label>-->
+      <!--</div>-->
+      <div class="item item-toggle item-text-wrap">
+        Availability of functional Projector
+        <label class="toggle toggle-balanced">
+          <input type="checkbox" ng-model="school.s76Projector">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="item item-toggle item-text-wrap">
+        Availability of Functional Computer
+        <label class="toggle toggle-balanced">
+          <input type="checkbox" ng-model="school.s77Computer">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <div class="item item-toggle item-text-wrap">
+        Availability of electricity
+        <label class="toggle toggle-balanced">
+          <input type="checkbox" ng-model="school.s78Electricity">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
 
-      <li class="item item-toggle">
-        Continuous Power Supply
-        <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="school.PowerSupply">
-          <div class="track">
-            <div class="handle"></div>
-          </div>
-        </label>
-      </li>
-      <li class="item item-input item-floating-label">
-        <span class="input-label">RemarksFacilities</span>
-        <textarea ng-model="school.remarkSf" placeholder="Remarks"></textarea>
-      </li>
     </ul>
-
-      <div class="item item-toggle item-text-wrap">
-        Provision of Sanitary Napkins
-        <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="school.SanitaryNapkins">
-          <div class="track">
-            <div class="handle"></div>
-          </div>
-        </label>
-      </div>
-      <div class="item item-toggle item-text-wrap">
-        Functional Powerpoint Projector
-        <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="school.Projector">
-          <div class="track">
-            <div class="handle"></div>
-          </div>
-        </label>
-      </div>
-      <div class="item item-toggle item-text-wrap">
-        Functional Computer
-        <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="school.Computer">
-          <div class="track">
-            <div class="handle"></div>
-          </div>
-        </label>
-      </div>
       <div class="item item-toggle item-text-wrap">
         Availability of School Playground
         <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="school.Playground">
+          <input type="checkbox" ng-model="school.s79Playground">
           <div class="track">
             <div class="handle"></div>
           </div>
         </label>
       </div>
+
       <div class="item item-toggle item-text-wrap">
         Availability of School Activity Hall
         <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="school.ActivityHall">
+          <input type="checkbox" ng-model="school.s80ActivityHall">
+          <div class="track">
+            <div class="handle"></div>
+          </div>
+        </label>
+      </div>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">On which day of the week, IFA is given</span>
+        <input ng-model="school.s81IFADay" type="date" placeholder="On which day of the week, IFA is given">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">At what time of the day is it given</span>
+        <input ng-model="school.s82IFATime" type="time" placeholder="At what time of the day is it given">
+      </label>
+      <label class="item item-input item-text-wrap item-stacked-label">
+        <div class=" ">No. of IFA tablets ANM gave last month - Week 1</div>
+        <input ng-model="school.s83IFAWeek1" type="number" placeholder="">
+      </label>
+      <label class="item item-input item-floating-label">
+        <div class="">No. of IFA tablets ANM gave last month - Week 2</div>
+        <input ng-model="school.s84IFAWeek2" type="number" placeholder="">
+      </label>
+      <label class="item item-input item-text-wrap item-floating-label">
+        <div class="">No. of IFA tablets ANM gave last month - Week 3</div>
+        <input ng-model="school.s85IFAWeek3" type="number" placeholder="">
+      </label>
+      <label class="item item-input item-text-wrap item-floating-label">
+        <div class="">No. of IFA tablets ANM gave last month - Week 4</div>
+        <input ng-model="school.s86IFAWeek4" type="number" placeholder="">
+      </label>
+      <label class="item item-input item-text-wrap item-stacked-label">
+        <div class="">No. of students given IFA last week(Ask Teacher)</div>
+        <input ng-model="school.s87IFALastWeek" type="number" placeholder="">
+      </label>
+      <div class="item item-toggle item-text-wrap">
+        Is there any record for IFA consumption
+        <label class="toggle toggle-balanced">
+          <input type="checkbox" ng-model="school.s88IFARecord">
           <div class="track">
             <div class="handle"></div>
           </div>
         </label>
       </div>
 
-
-    <div class="list margin-bottom-0">
+      <div class="list margin-bottom-0">
       <div class="item item-divider">
         Health Facility Details
       </div>
+<div class="item item-text-wrap">
+        <b>Instructions:</b>
+        <div>a) Select the right responses from the choices given</div>
+        <div>b) To be asked from the principal or head master or school teacher</div>
+      </div>
+
       <div class="item item-toggle item-text-wrap">
         Availability of First Aid Box
         <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="school.FirstAidBox">
+          <input type="checkbox" ng-model="school.s89FirstAidBox">
           <div class="track">
             <div class="handle"></div>
           </div>
         </label>
       </div>
       <div class="item item-toggle item-text-wrap">
-        Are students trained in First Aid
+        Are students trained in giving First Aid
         <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="school.StudentsFirstAid">
+          <input type="checkbox" ng-model="school.s90StudentsFirstAid">
           <div class="track">
             <div class="handle"></div>
           </div>
         </label>
       </div>
       <div class="item item-toggle item-text-wrap">
-        Are teachers trained in First Aid
+        Are teachers trained in giving First Aid
         <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="school.TeachersFirstAid">
+          <input type="checkbox" ng-model="school.s91TeachersFirstAid">
           <div class="track">
             <div class="handle"></div>
           </div>
         </label>
       </div>
-      <label class="item item-input custom item-select">
-        <span class="custom-label">What is done when student is unwell</span>
-        <select ng-model="school.MedicalResponse" required>
-          <option value="sent home" selected>Sent Home</option>
-          <option value="made to rest in school">Made to Rest in School</option>
-          <option value="sent to health facility">Sent to Health Facility</option>
-          <option value="none">None of the Above</option>
-        </select>
+
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Last health checkup done by RBSK team</span>
+        <input ng-model="school.s92RBSKCheckup" type="date" placeholder="Last health checkup done by RBSK team">
       </label>
 
       <div class="item item-toggle item-text-wrap">
-        Any health checkup performed in 2016 by RBSK team
+        Were there any cases which required referral medical help
         <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="school.HealthCheckup2016">
+          <input type="checkbox" ng-model="school.s93MedicalCases">
           <div class="track">
             <div class="handle"></div>
           </div>
         </label>
       </div>
-      <div class="item item-toggle item-text-wrap">
-        Any referral medical cases last year
-        <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="school.MedicalCases2016">
-          <div class="track">
-            <div class="handle"></div>
-          </div>
-        </label>
-      </div>
-      <div class="item item-toggle item-text-wrap">
-        Availability of AFHC or YUVA near school
-        <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="school.AFHCorYUVA">
-          <div class="track">
-            <div class="handle"></div>
-          </div>
-        </label>
-      </div>
-      <label class="item item-input item-floating-label">
-        <span class="input-label">Name of AFHC / YUVA</span>
-        <input ng-model="school.AFHCName" type="text" placeholder="Name of AFHC / YUVA">
+      <label class="item item-input item-stacked-label item-text-wrap">
+        <div class="">In case of minor medical ailments, usually from whom services are taken</div>
+        <input ng-model="school.s94IFMinorMedical" type="text" placeholder="">
+      </label>
+      <label class="item item-input item-stacked-label item-text-wrap">
+        <div class="">In case of major medical emergency, where is a student referred to</div>
+        <input ng-model="school.s95IFMajorMedical" type="text" placeholder="">
       </label>
       <label class="item item-input item-floating-label">
-      <span class="input-label">Distance to AFHC / YUVA (in KM)</span>
-      <input ng-model="school.AFHCDistance" type="number"
-             placeholder="Distance to AFHC / YUVA (in KM)">
+        <span class="input-label">Name of nearest health facility</span>
+        <input ng-model="school.s96NameOfHF" type="text" placeholder="Name of nearest health facility">
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Name of person in charge</span>
-        <input ng-model="school.AFHCPoC" type="text" placeholder="Name of person in charge">
+        <span class="input-label">Distance to nearest health facility (KM)</span>
+        <input ng-model="school.s97DistanceOfHF" type="number" placeholder="Distance to nearest health facility (KM)">
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Phone Number</span>
-        <input ng-model="school.AFHCPhone" type="number" placeholder="Phone Number">
+        <span class="input-label">Mode of Transport to reach the facility</span>
+        <input ng-model="school.s98TransportToHF" type="text" placeholder="Mode of Transport to reach the facility">
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Mode of transport to reach facility</span>
-        <input ng-model="school.AFHCCommute" type="text" placeholder="Mode of transport to reach facility">
+        <span class="input-label">Name of nearest Govt. health facility</span>
+        <input ng-model="school.s99NameOfGHF" type="text" placeholder="Name of nearest Govt. health facility">
       </label>
-
-
       <label class="item item-input item-floating-label">
-        <span class="input-label">Remarks</span>
-        <textarea ng-model="school.RemarksMedical" type="text" placeholder="Remarks"></textarea>
+        <span class="input-label">Distance to nearest Govt. health facility (KM)</span>
+        <input ng-model="school.s100DistanceOfHF" type="number" placeholder="Distance to nearest Govt. health facility (KM)">
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Mode of Transport to reach the facility</span>
+        <input ng-model="school.s101TransportToHF" type="text" placeholder="Mode of Transport to reach the facility">
       </label>
 
     </div>
