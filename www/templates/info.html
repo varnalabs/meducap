@@ -11,8 +11,8 @@
       </div>
       <ion-item class="item-avatar"  ng-repeat="school in schools" ui-sref="home.edit-school({id: $index})">
         <img src="img/edu.png">
-        <span>{{school.Name}}</span>
-        <span class="item-note"></span>
+        <span>{{school.s008SchoolName}}</span>
+        <span class="item-note">{{school.s014Mandal}}</span>
         <ion-option-button class="button-assertive"
                            ng-click="deleteS($index)">
           Delete
@@ -20,8 +20,8 @@
       </ion-item>
       <ion-item class="item-avatar"  ng-repeat="hospital in hospitals" ui-sref="home.edit-hospital({id: $index})">
         <img src="img/med2.png">
-        <span>{{hospital.Name}}</span>
-        <span class="item-note"></span>
+        <span>{{hospital.h001Name}}</span>
+        <span class="item-note">{{hospital.h008Mandal}}</span>
         <ion-option-button class="button-assertive"
                            ng-click="deleteH($index)">
           Delete
