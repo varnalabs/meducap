@@ -13,20 +13,20 @@
       </div>
       <label class="item item-input custom item-select">
         <span class="custom-label">Route Type</span>
-        <select>
-          <option>School-School</option>
-          <option>Hospital-School</option>
-          <option>School-School</option>
+        <select ng-model="route.r001RouteType">
+          <option value="School-School">School-School</option>
+          <option value="School-Hospital">School-Hospital</option>
+          <option value="Hospital-Hospital">Hospital-Hospital</option>
         </select>
       </label>
 
       <label class="item item-input item-floating-label">
         <span class="input-label">Starting Point</span>
-        <input ng-model="route.startingPoint" type="text" placeholder="Starting Point" required>
+        <input ng-model="route.r002startingPoint" type="text" placeholder="Starting Point" required>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Ending Point</span>
-        <input ng-model="route.endingPoint" type="text" placeholder="Ending Point" required>
+        <input ng-model="route.r003endingPoint" type="text" placeholder="Ending Point" required>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Latitude</span>
