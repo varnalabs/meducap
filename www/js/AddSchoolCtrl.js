@@ -5,7 +5,7 @@ meducap.controller('AddSchoolCtrl', function($scope,$cordovaGeolocation,$state, 
 $scope.school.s003StartingTime = new Date();
 $scope.school.s005DataCollectionDate = new Date();
 
-$scope.school.s066StudentClubs = false;
+/*$scope.school.s066StudentClubs = false;
 $scope.school.s067PTAssociation = false;
 $scope.school.s068DrinkingWater = false;
 $scope.school.s069OverheadTankDW = false;
@@ -31,12 +31,12 @@ $scope.school.s095StudentsFirstAid = false;
 $scope.school.s096TeachersFirstAid = false;
 $scope.school.s097RBSKCheckup = false;
 $scope.school.s098MedicalCases = false;
-
+*/
   console.log(auth.getSchools());
 
   $scope.addSchool = function(school){
     school.s004EndingTime = new Date();
-    school.s016District = 'Visakhapatnam';
+    school.s015District = 'Visakhapatnam';
     auth.setArrSchool(school);
     $state.go('home.dash');
   };

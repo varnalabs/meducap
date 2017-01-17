@@ -52,7 +52,9 @@
           <option value="Other">Any Other</option>
         </select>
       </label>
-
+		<div class="item item-divider">
+          School Address
+        </div>
       <label class="item item-input item-floating-label">
         <span class="input-label">Hamlet</span>
         <input ng-model="healthcare.h005Hamlet" type="text" placeholder="Hamlet" required>
@@ -70,20 +72,23 @@
         <input ng-model="healthcare.h008Mandal" type="text" placeholder="Mandal" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Pin Code</span>
-        <input ng-model="healthcare.h009PinCode" type="number" placeholder="Pin Code" required>
-      </label>
-      <label class="item item-input item-floating-label">
         <span class="input-label">&nbsp;</span>
         <input  type="text" placeholder="" value="Visakhapatnam, Andhra Pradesh " readonly>
       </label>
-
+	  <label class="item item-input item-floating-label">
+        <span class="input-label">Pin Code</span>
+        <input ng-model="healthcare.h010PinCode" type="number" placeholder="Pin Code" required>
+      </label>
+	  
+	 <div class="item item-divider">
+          Basic Details
+        </div>
       <label class="item item-input item-floating-label">
         <span class="input-label">Name of doctor in charge</span>
         <input ng-model="healthcare.h002DoctorName" type="text" placeholder="Name of doctor in charge" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Phone Number</span>
+        <span class="input-label">Phone number</span>
         <input ng-model="healthcare.h003Phone" type="number" placeholder="Phone Number" required>
       </label>
 
@@ -92,26 +97,25 @@
         <input ng-model="healthcare.h013BusstopName" type="text" placeholder="Name of nearest bus stop" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Distance to bus stop (in KM)</span>
-        <input ng-model="healthcare.h014BusstopDistance" type="number" placeholder="Distance to bus stop (in KM)" required>
+        <span class="input-label">Distance to bus stop (in km)</span>
+        <input ng-model="healthcare.h014BusstopDistance" type="number" placeholder="Distance to bus stop (in km)" required>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Name of nearest bus stand</span>
         <input ng-model="healthcare.h011BusstandName" type="text" placeholder="Name of nearest bus stand" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Distance to bus stand (in KM)</span>
-        <input ng-model="healthcare.h012BusstandDistance" type="number" placeholder="Distance to bus stand (in KM)" required>
+        <span class="input-label">Distance to bus stand (in km)</span>
+        <input ng-model="healthcare.h012BusstandDistance" type="number" placeholder="Distance to bus stand (in km)" required>
       </label>
-      <div class="item item-toggle item-text-wrap">
-        Is there a AFHC/Yuva Clinic at the health facility
-        <label class="toggle toggle-balanced">
-          <input type="checkbox" ng-model="healthcare.h015AFHC">
-          <div class="track">
-            <div class="handle"></div>
-          </div>
-        </label>
 
+	  <label class="item item-input custom item-select">
+        <span class="custom-label">Is there a AFHC/Yuva Clinic at the health facility</span>
+        <select ng-model="healthcare.h015AFHC" required>
+          <option value="Yes" selected>Yes</option>
+          <option value="No">No</option>
+        </select>
+      </label>
     </div>
 
       <button ng-disabled="hospitalForm.$invalid" class="button button-positive button-full margin-0 sign-btn">Save</button>
