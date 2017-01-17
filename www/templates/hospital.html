@@ -53,7 +53,7 @@
         </select>
       </label>
 		<div class="item item-divider">
-          School Address
+          Hospital Address
         </div>
       <label class="item item-input item-floating-label">
         <span class="input-label">Hamlet</span>
@@ -116,6 +116,14 @@
           <option value="No">No</option>
         </select>
       </label>
+	  	  <label class="item item-input custom item-select">
+        <span class="custom-label">Is any counselor posted at the health facility</span>
+        <select ng-model="healthcare.h016Counselor" required>
+          <option value="Yes" selected>Yes</option>
+          <option value="No">No</option>
+        </select>
+      </label>
+
     </div>
 
       <button ng-disabled="hospitalForm.$invalid" class="button button-positive button-full margin-0 sign-btn">Save</button>
@@ -126,4 +134,3 @@
   </ion-content>
 
 </ion-view>
-
