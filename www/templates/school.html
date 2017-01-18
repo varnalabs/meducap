@@ -149,10 +149,9 @@
         <input ng-model="school.s019SchoolEndTime" type="time" placeholder="School ends at" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Which Saturdays are working</span>
-        <input ng-model="school.s020SchoolSaturdays" type="text" placeholder="Which Saturdays are working" required>
+        <span class="input-label">Which Saturdays is a holiday</span>
+        <input ng-model="school.s020SchoolSaturdays" type="text" placeholder="Which Saturday is a holiday" required>
       </label>
-
       <label class="item item-input item-floating-label">
         <span class="input-label">Name of nearest bus stand</span>
         <input ng-model="school.s021BusstandName" type="text" placeholder="Name of nearest bus stand" required>
@@ -273,53 +272,53 @@
         <input ng-model="school.s046StudentsTotal" type="number" placeholder="Student strength - Total" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Student strength - Male</span>
-      <input ng-model="school.s047StudentsMale" type="number" placeholder="Student strength - Male" required>
+        <span class="input-label">Student strength - Boys</span>
+      <input ng-model="school.s047StudentsBoys" type="number" placeholder="Student strength - Boys" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Student strength - Female</span>
-        <input ng-model="school.s048StudentsFemale" type="number" placeholder="Student strength - Female" required>
+        <span class="input-label">Student strength - Girls</span>
+        <input ng-model="school.s048StudentsGirls" type="number" placeholder="Student strength - Girls" required>
       </label>
 
       <label class="item item-input item-floating-label">
-        <span class="input-label">Student strength in Grade 6 - Male</span>
-        <input ng-model="school.s049StudentsMale6" type="number" placeholder="Student strength in Grade 6 - Male" required>
+        <span class="input-label">Student strength in Grade 6 - Boys</span>
+        <input ng-model="school.s049StudentsBoys6" type="number" placeholder="Student strength in Grade 6 - Boys" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Student strength in Grade 6 - Female</span>
-        <input ng-model="school.s050StudentsFemale6" type="number" placeholder="Student strength in Grade 6 - Female" required>
+        <span class="input-label">Student strength in Grade 6 - Girls</span>
+        <input ng-model="school.s050StudentsGirls6" type="number" placeholder="Student strength in Grade 6 - Girls" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Student strength in Grade 7 - Male</span>
-        <input ng-model="school.s051StudentsMale7" type="number" placeholder="Student strength in Grade 7 - Male" required>
+        <span class="input-label">Student strength in Grade 7 - Boys</span>
+        <input ng-model="school.s051StudentsBoys7" type="number" placeholder="Student strength in Grade 7 - Boys" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Student strength in Grade 7 - Female</span>
-        <input ng-model="school.s052StudentsFemale7" type="number" placeholder="Student strength in Grade 7 - Female" required>
+        <span class="input-label">Student strength in Grade 7 - Girls</span>
+        <input ng-model="school.s052StudentsGirls7" type="number" placeholder="Student strength in Grade 7 - Girls" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Student strength in Grade 8 - Male</span>
-        <input ng-model="school.s053StudentsMale8" type="number" placeholder="Student strength in Grade 8 - Male" required>
+        <span class="input-label">Student strength in Grade 8 - Boys</span>
+        <input ng-model="school.s053StudentsBoys8" type="number" placeholder="Student strength in Grade 8 - Boys" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Student strength in Grade 8 - Female</span>
-        <input ng-model="school.s054StudentsFemale8" type="number" placeholder="Student strength in Grade 8 - Female" required>
+        <span class="input-label">Student strength in Grade 8 - Girls</span>
+        <input ng-model="school.s054StudentsGirls8" type="number" placeholder="Student strength in Grade 8 - Girls" required>
      </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Student strength in Grade 9 - Male</span>
-        <input ng-model="school.s055StudentsMale9" type="number" placeholder="Student strength in Grade 9 - Male" required>
+        <span class="input-label">Student strength in Grade 9 - Boys</span>
+        <input ng-model="school.s055StudentsBoys9" type="number" placeholder="Student strength in Grade 9 - Boys" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Student strength in Grade 9 - Female</span>
-        <input ng-model="school.s056StudentsFemale9" type="number" placeholder="Student strength in Grade 9 - Female" required>
+        <span class="input-label">Student strength in Grade 9 - Girls</span>
+        <input ng-model="school.s056StudentsGirls9" type="number" placeholder="Student strength in Grade 9 - Girls" required>
       </label>
       <label class="item item-input item-floating-label">
-        <span class="input-label">Student strength in Grade 10 - Male</span>
-        <input ng-model="school.s057StudentsMale10" type="number" placeholder="Student strength in Grade 10 - Male" required>
+        <span class="input-label">Student strength in Grade 10 - Boys</span>
+        <input ng-model="school.s057StudentsBoys10" type="number" placeholder="Student strength in Grade 10 - Boys" required>
       </label>
 	  <label class="item item-input item-floating-label">
-        <span class="input-label">Student strength in Grade 10 - Female</span>
-        <input ng-model="school.s058StudentsFemale10" type="number" placeholder="Student strength in Grade 10 - Female" required>
+        <span class="input-label">Student strength in Grade 10 - Girls</span>
+        <input ng-model="school.s058StudentsGirls10" type="number" placeholder="Student strength in Grade 10 - Girls" required>
       </label>
 
       <label class="item item-input item-stacked-label">
@@ -491,7 +490,8 @@
         <select ng-model="school.s084Electricity" required>
           <option value="Yes" selected>Yes</option>
           <option value="No">No</option>
-        </select>
+		  <option value="Intermittent">Intermittent</option>
+		</select>
       </label>
 
 	  <label class="item item-input custom item-select">
@@ -524,27 +524,27 @@
       </label>
       <label class="item item-input item-stacked-label">
         <span class="input-label">At what time of the day is it given</span>
-        <input ng-model="school.s088IFATime" type="time" placeholder="At what time of the day is it given">
+        <input ng-model="school.s088IFATime" type="time" placeholder="At what time of the day is it given" required>
       </label>
       <label class="item item-input item-text-wrap item-stacked-label">
         <div class=" ">No. of IFA tablets ANM gave last month - Week 1</div>
-        <input ng-model="school.s089IFAWeek1" type="number" placeholder="">
+        <input ng-model="school.s089IFAWeek1" type="number" placeholder="" required>
       </label>
       <label class="item item-input item-text-wrap item-stacked-label">
         <div class="">No. of IFA tablets ANM gave last month - Week 2</div>
-        <input ng-model="school.s090IFAWeek2" type="number" placeholder="">
+        <input ng-model="school.s090IFAWeek2" type="number" placeholder="" required>
       </label>
       <label class="item item-input item-text-wrap item-floating-label">
         <div class="">No. of IFA tablets ANM gave last month - Week 3</div>
-        <input ng-model="school.s091IFAWeek3" type="number" placeholder="">
+        <input ng-model="school.s091IFAWeek3" type="number" placeholder="" required>
       </label>
       <label class="item item-input item-text-wrap item-floating-label">
         <div class="">No. of IFA tablets ANM gave last month - Week 4</div>
-        <input ng-model="school.s092IFAWeek4" type="number" placeholder="">
+        <input ng-model="school.s092IFAWeek4" type="number" placeholder="" required>
       </label>
       <label class="item item-input item-text-wrap item-stacked-label">
         <div class="">No. of students given IFA last week (Ask Teacher)</div>
-        <input ng-model="school.s093IFALastWeek" type="number" placeholder="">
+        <input ng-model="school.s093IFALastWeek" type="number" placeholder="" required>
       </label>
 	  <label class="item item-input custom item-select">
         <span class="custom-label">Is there any record for IFA consumption</span>
@@ -586,7 +586,7 @@
       </label>
       <label class="item item-input item-stacked-label">
         <span class="input-label">Last health checkup done by RBSK team</span>
-        <input ng-model="school.s098RBSKCheckup" type="date" placeholder="Last health checkup done by RBSK team">
+        <input ng-model="school.s098RBSKCheckup" type="date" placeholder="Last health checkup done by RBSK team" required>
       </label>
 	
 	  <label class="item item-input custom item-select">
@@ -600,35 +600,35 @@
 
       <label class="item item-input item-stacked-label item-text-wrap">
         <div class="">In case of minor medical ailments, usually from whom services are taken</div>
-        <input ng-model="school.s100IFMinorMedical" type="text" placeholder="">
+        <input ng-model="school.s100IFMinorMedical" type="text" placeholder="" required>
       </label>
       <label class="item item-input item-stacked-label item-text-wrap">
         <div class="">In case of major medical emergency, where is a student referred to</div>
-        <input ng-model="school.s101IFMajorMedical" type="text" placeholder="">
+        <input ng-model="school.s101IFMajorMedical" type="text" placeholder="" required>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Name of nearest health facility</span>
-        <input ng-model="school.s102NameOfHF" type="text" placeholder="Name of nearest health facility">
+        <input ng-model="school.s102NameOfHF" type="text" placeholder="Name of nearest health facility" required>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Distance to nearest health facility (km)</span>
-        <input ng-model="school.s103DistanceOfHF" type="number" placeholder="Distance to nearest health facility (km)">
+        <input ng-model="school.s103DistanceOfHF" type="number" placeholder="Distance to nearest health facility (km)" required>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Mode of Transport to reach the facility</span>
-        <input ng-model="school.s104TransportToHF" type="text" placeholder="Mode of Transport to reach the facility">
+        <input ng-model="school.s104TransportToHF" type="text" placeholder="Mode of Transport to reach the facility" required>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Name of nearest Govt. health facility</span>
-        <input ng-model="school.s105NameOfGHF" type="text" placeholder="Name of nearest Govt. health facility">
+        <input ng-model="school.s105NameOfGHF" type="text" placeholder="Name of nearest Govt. health facility" required>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Distance to nearest Govt. health facility (km)</span>
-        <input ng-model="school.s106DistanceOfHF" type="number" placeholder="Distance to nearest Govt. health facility (km)">
+        <input ng-model="school.s106DistanceOfHF" type="number" placeholder="Distance to nearest Govt. health facility (km)" required>
       </label>
       <label class="item item-input item-floating-label">
         <span class="input-label">Mode of Transport to reach the facility</span>
-        <input ng-model="school.s107TransportToHF" type="text" placeholder="Mode of Transport to reach the facility">
+        <input ng-model="school.s107TransportToHF" type="text" placeholder="Mode of Transport to reach the facility" required>
       </label>
 
     </div>
