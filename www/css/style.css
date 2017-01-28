@@ -104,5 +104,35 @@
   height: 50px;
 }
 form .ng-invalid{
-  border-bottom:1px solid #d50606;
+	position:relative;
+}
+form .ng-invalid::after{
+	/*content:'*';
+	font-size:25px;
+	position:absolute;
+	right:15px;
+	color:red;
+	*/
+}
+form .ng-invalid[type="date"], form .ng-invalid[type="time"]{
+	border-bottom:1px solid red;
+}
+.input-label{
+	width:100%;
+	max-width:100% !important;
+}
+.item-select .ng-invalid{
+	border-bottom:1px solid red;
+}
+form .ng-invalid::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: red;
+}
+form .ng-invalid::-moz-placeholder { /* Firefox 19+ */
+  color: red;
+}
+form .ng-invalid:-ms-input-placeholder { /* IE 10+ */
+  color: red;
+}
+form .ng-invalid:-moz-placeholder { /* Firefox 18- */
+  color: red;
 }

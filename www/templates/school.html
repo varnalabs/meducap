@@ -24,6 +24,7 @@
           <span class="input-label">Name of the person collecting data</span>
           <input type="text" ng-model="school.s001Interviewer" placeholder="Name of the person collecting data"
                  required>
+				 
         </label>
         <label class="item item-input item-floating-label">
           <span class="input-label">Contact Number</span>
@@ -554,27 +555,27 @@
       </label>
       <label class="item item-input item-stacked-label">
         <span class="input-label">At what time of the day is it given</span>
-        <input ng-model="school.s088IFATime" type="time" placeholder="At what time of the day is it given" required>
-      </label>
-      <label class="item item-input item-text-wrap item-stacked-label">
-        <div class=" ">No. of IFA tablets ANM gave last month - Week 1</div>
-        <input ng-model="school.s089IFAWeek1" type="number" placeholder="" required>
-      </label>
-      <label class="item item-input item-text-wrap item-stacked-label">
-        <div class="">No. of IFA tablets ANM gave last month - Week 2</div>
-        <input ng-model="school.s090IFAWeek2" type="number" placeholder="" required>
+        <input ng-model="school.s088IFATime" type="time" placeholder="" required>
       </label>
       <label class="item item-input item-text-wrap item-floating-label">
-        <div class="">No. of IFA tablets ANM gave last month - Week 3</div>
-        <input ng-model="school.s091IFAWeek3" type="number" placeholder="" required>
+        <div class="input-label ">No. of IFA tablets given last month - Week 1</div>
+        <input ng-model="school.s089IFAWeek1" type="number" placeholder="No. of IFA tablets given last month - Week 1" required>
       </label>
       <label class="item item-input item-text-wrap item-floating-label">
-        <div class="">No. of IFA tablets ANM gave last month - Week 4</div>
-        <input ng-model="school.s092IFAWeek4" type="number" placeholder="" required>
+        <div class="input-label">No. of IFA tablets given last month - Week 2</div>
+        <input ng-model="school.s090IFAWeek2" type="number" placeholder="No. of IFA tablets given last month - Week 2" required>
       </label>
-      <label class="item item-input item-text-wrap item-stacked-label">
-        <div class="">No. of students given IFA last week (Ask Teacher)</div>
-        <input ng-model="school.s093IFALastWeek" type="number" placeholder="" required>
+      <label class="item item-input item-text-wrap item-floating-label">
+        <div class="input-label">No. of IFA tablets given last month - Week 3</div>
+        <input ng-model="school.s091IFAWeek3" type="number" placeholder="No. of IFA tablets given last month - Week 3" required>
+      </label>
+      <label class="item item-input item-text-wrap item-floating-label">
+        <div class="input-label">No. of IFA tablets given last month - Week 4</div>
+        <input ng-model="school.s092IFAWeek4" type="number" placeholder="No. of IFA tablets given last month - Week 4" required>
+      </label> 
+      <label class="item item-input item-text-wrap item-floating-label">
+        <div class="input-label">No. of students given IFA last week (Ask Teacher)</div>
+        <input ng-model="school.s093IFALastWeek" type="number" placeholder="No. of students given IFA last week (Ask Teacher)" required>
       </label>
       <label class="item item-input custom item-select">
         <span class="custom-label">Is there any record for IFA consumption</span>
@@ -630,13 +631,13 @@
         </label>
 
 
-        <label class="item item-input item-stacked-label item-text-wrap">
-          <div class="">In case of minor medical ailments, usually from whom services are taken</div>
-          <input ng-model="school.s100IFMinorMedical" type="text" placeholder="" required>
+        <label class="item item-input item-floating-label item-text-wrap">
+          <div class="input-label">In case of minor medical ailments, usually from whom services are taken</div>
+          <input ng-model="school.s100IFMinorMedical" type="text" placeholder="In case of minor medical ailments, usually from whom services are taken" required>
         </label>
-        <label class="item item-input item-stacked-label item-text-wrap">
-          <div class="">In case of major medical emergency, where is a student referred to</div>
-          <input ng-model="school.s101IFMajorMedical" type="text" placeholder="" required>
+        <label class="item item-input item-floating-label item-text-wrap">
+          <div class="input-label">In case of major medical emergency, where is a student referred to</div>
+          <input ng-model="school.s101IFMajorMedical" type="text" placeholder="In case of major medical emergency, where is a student referred to" required>
         </label>
         <label class="item item-input item-floating-label">
           <span class="input-label">Name of nearest health facility</span>
