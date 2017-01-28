@@ -1,4 +1,4 @@
-meducap.controller('AddHospitalCtrl', function($scope,$cordovaGeolocation,$state, auth){
+meducap.controller('AddHospitalCtrl', function($scope,$cordovaGeolocation,$cordovaCamera,$state, auth){
   console.log(auth.getHospital());
   $scope.healthcare = {};
   $scope.healthcare.uploadedBy = auth.getUser().username;
@@ -29,6 +29,27 @@ meducap.controller('AddHospitalCtrl', function($scope,$cordovaGeolocation,$state
   };
   $scope.refreshLocation();
 
+  $scope.getImage = function(){
+    var options = {
+      quality: 50,
+      destinationType: Camera.DestinationType.DATA_URL,
+      sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
+      allowEdit: true,
+      encodingType: Camera.EncodingType.JPEG,
+      targetWidth: 600,
+      targetHeight: 450,
+      popoverOptions: CameraPopoverOptions,
+      saveToPhotoAlbum: false,
+      correctOrientation:true
+    };
+
+    $cordovaCamera.getPicture(options).then(function(imageData) {
+      
+      $scope.healthcare.healthcareImage = "data:image/jpeg;base64," + imageData;
+    }, function(err) {
+      // error
+    });
+  };
   //var watchOptions = {timeout : 3000, enableHighAccuracy: false};
   //var watch = $cordovaGeolocation.watchPosition(watchOptions);
   //

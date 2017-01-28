@@ -18,7 +18,8 @@
     <div class="list padding-top-40 margin-bottom-0">
       <div class="item item-divider">
         Health Facility Details
-      </div> <div class="item item-text-wrap">
+      </div>
+      <div class="item item-text-wrap">
         <b>Instructions:</b>
         <div>a) Select the right responses from the choices given.</div>
         <div>b) To be asked from the principal or headmaster or school teacher.</div>
@@ -79,7 +80,7 @@
         <span class="input-label">Pin Code</span>
         <input ng-model="healthcare.h010PinCode" type="number" placeholder="Pin Code" required>
       </label>
-	  
+
 	 <div class="item item-divider">
           Basic Details
         </div>
@@ -125,9 +126,17 @@
       </label>
 
     </div>
+      <button type="button" class="button button-positive button-full"
+              ng-click="getImage()">Upload Image</button>
+      <div class="item">
+        <img class="full-image" ng-src="{{healthcare.healthcareImage}}">
+      </div>
 
-      <button ng-disabled="hospitalForm.$invalid" class="button button-positive button-full margin-0 sign-btn">Save</button>
-  </div>
+      <button ng-disabled="hospitalForm.$invalid"
+              class="button button-positive button-full margin-0 sign-btn">
+        Save
+      </button>
+
 
   </form>
 

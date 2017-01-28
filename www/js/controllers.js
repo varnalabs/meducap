@@ -105,7 +105,7 @@ meducap.controller('SettingsCtrl', function($scope, $state, auth) {
   }
 });
 
-meducap.controller('EditSchoolCtrl', function($scope, $state,$stateParams,$cordovaGeolocation, auth) {
+meducap.controller('EditSchoolCtrl', function($scope, $state,$stateParams,$cordovaGeolocation,$cordovaCamera, auth) {
     $scope.school = {};
     var schools = auth.getSchools();
 
@@ -134,8 +134,30 @@ meducap.controller('EditSchoolCtrl', function($scope, $state,$stateParams,$cordo
       });
   };
 
+  $scope.getImage = function(){
+    var options = {
+      quality: 50,
+      destinationType: Camera.DestinationType.DATA_URL,
+      sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
+      allowEdit: true,
+      encodingType: Camera.EncodingType.JPEG,
+      targetWidth: 600,
+      targetHeight: 450,
+      popoverOptions: CameraPopoverOptions,
+      saveToPhotoAlbum: false,
+      correctOrientation:true
+    };
+
+    $cordovaCamera.getPicture(options).then(function(imageData) {
+
+      $scope.school.schoolImage = "data:image/jpeg;base64," + imageData;
+    }, function(err) {
+      // error
+    });
+  };
+
 });
-meducap.controller('EditHospitalCtrl', function($scope, $state,$stateParams,$cordovaGeolocation, auth) {
+meducap.controller('EditHospitalCtrl', function($scope, $state,$stateParams,$cordovaGeolocation, $cordovaCamera, auth) {
   $scope.hospital = {};
   var hospitals = auth.getHospital();
 
@@ -166,6 +188,28 @@ meducap.controller('EditHospitalCtrl', function($scope, $state,$stateParams,$cor
       });
   };
 
+
+  $scope.getImage = function(){
+    var options = {
+      quality: 50,
+      destinationType: Camera.DestinationType.DATA_URL,
+      sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
+      allowEdit: true,
+      encodingType: Camera.EncodingType.JPEG,
+      targetWidth: 600,
+      targetHeight: 450,
+      popoverOptions: CameraPopoverOptions,
+      saveToPhotoAlbum: false,
+      correctOrientation:true
+    };
+
+    $cordovaCamera.getPicture(options).then(function(imageData) {
+
+      $scope.healthcare.healthcareImage = "data:image/jpeg;base64," + imageData;
+    }, function(err) {
+      // error
+    });
+  };
 
 });
 meducap.controller('RouteViewCtrl', function($scope,

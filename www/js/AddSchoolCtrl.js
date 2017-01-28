@@ -1,4 +1,4 @@
-meducap.controller('AddSchoolCtrl', function($scope,$cordovaGeolocation,$state, auth){
+meducap.controller('AddSchoolCtrl', function($scope,$cordovaGeolocation,$state,$cordovaCamera, auth){
   $scope.school = {};
   $scope.school.uploadedBy = auth.getUser().username;
   //$scope.school.drinkingWater = true;
@@ -61,7 +61,27 @@ $scope.school.s098MedicalCases = false;
   };
   $scope.refreshLocation();
 
+$scope.getImage = function(){
+  var options = {
+    quality: 50,
+    destinationType: Camera.DestinationType.DATA_URL,
+    sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
+    allowEdit: true,
+    encodingType: Camera.EncodingType.JPEG,
+    targetWidth: 600,
+    targetHeight: 450,
+    popoverOptions: CameraPopoverOptions,
+    saveToPhotoAlbum: false,
+    correctOrientation:true
+  };
 
+  $cordovaCamera.getPicture(options).then(function(imageData) {
+
+    $scope.school.schoolImage = "data:image/jpeg;base64," + imageData;
+  }, function(err) {
+    // error
+  });
+};
   //var watchOptions = {timeout : 3000, enableHighAccuracy: false};
   //var watch = $cordovaGeolocation.watchPosition(watchOptions);
   //

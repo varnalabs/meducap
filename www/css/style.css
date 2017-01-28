@@ -103,3 +103,6 @@
   width: 200px;
   height: 50px;
 }
+form .ng-invalid{
+  border-bottom:1px solid #d50606;
+}
